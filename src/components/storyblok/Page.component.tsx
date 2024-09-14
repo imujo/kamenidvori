@@ -2,7 +2,7 @@ import {
   NavStoryblok,
   PageStoryblok,
 } from "@/storyblok/types/component-types-sb";
-import { StoryblokComponentProps } from "@/types/StoryblokComponentProps.type";
+import { StoryblokComponentProps } from "@/types/storyblokComponentProps.type";
 import { getRelatedComponent } from "@/utils/getRelatedComponent.utils";
 import { typedStoryblokEditable } from "@/utils/typedStoryblokEditable";
 import { StoryblokComponent } from "@storyblok/react";
