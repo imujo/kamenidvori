@@ -1,7 +1,7 @@
 "use client";
 import Page from "@/components/storyblok/Page.component";
 import { env } from "@/env";
-import { sbComponents } from "@/utils/sbComponents";
+import { sbComponents } from "@/utils/sbComponents.utils";
 import {
   storyblokInit,
   apiPlugin,

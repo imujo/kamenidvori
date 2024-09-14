@@ -2,9 +2,9 @@ import componentsJson from "@/storyblok/components/components.kamenidvori.json";
 import { SbReactComponentsMap } from "@storyblok/react";
 import { difference } from "remeda";
 
-const allComponents = componentsJson.components.map(
-  (component) => component.name
-);
+const allComponents = componentsJson.components
+  .filter((component) => component.is_nestable)
+  .map((component) => component.name);
 
 type SbComponentsOptions =
   | {

@@ -1,3 +1,4 @@
+import { getResolveRelations } from "@/utils/getResolveRelations.utils";
 import { getStoryblokApi } from "@storyblok/react";
 import StoryblokStory from "@storyblok/react/story";
 import { notFound } from "next/navigation";
@@ -8,8 +9,8 @@ type FetchStoryblokProps = {
 
 export async function fetchStoryblok({ slug }: FetchStoryblokProps) {
   const storyblokApi = getStoryblokApi();
-
   const cv = new Date().getTime() / 1000;
+  const resolveRelations = getResolveRelations();
 
   try {
     return await storyblokApi.get(
@@ -17,6 +18,7 @@ export async function fetchStoryblok({ slug }: FetchStoryblokProps) {
       {
         version: "draft",
         resolve_links: "url",
+        resolve_relations: resolveRelations.join(","),
         cv,
       },
       {
