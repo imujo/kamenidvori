@@ -1,0 +1,5 @@
+{
+  "additionalProperties": false,
+  "unknownAny": true,
+  "strictIndexSignatures": true
+}
