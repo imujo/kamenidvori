@@ -11,8 +11,6 @@ export const generateStaticParams = env.NEXT_PUBLIC_IS_PREVIEW
 
 export const generateMetadata = defaultGenerateMetadata;
 
-export const dynamic = env.NEXT_PUBLIC_IS_PREVIEW ? "force-dynamic" : "error";
-
 export type RootPageProps = {
   params: {
     slug?: string[];
