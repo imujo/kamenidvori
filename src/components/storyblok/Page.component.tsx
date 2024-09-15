@@ -2,9 +2,9 @@ import {
   NavStoryblok,
   PageStoryblok,
 } from "@/storyblok/types/component-types-sb";
-import { StoryblokComponentProps } from "@/types/storyblokComponentProps.type";
-import { getRelatedComponent } from "@/utils/getRelatedComponent.utils";
-import { typedStoryblokEditable } from "@/utils/typedStoryblokEditable";
+import { StoryblokComponentProps } from "@/utils/storyblok/storyblokComponentProps.type";
+import { getRelatedComponent } from "@/utils/storyblok/getRelatedComponent.utils";
+import { typedStoryblokEditable } from "@/utils/storyblok/typedStoryblokEditable";
 import { StoryblokComponent } from "@storyblok/react";
 
 export default function Page({ blok }: StoryblokComponentProps<PageStoryblok>) {

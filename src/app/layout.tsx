@@ -1,9 +1,14 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+import {
+  storyblokInit,
+  apiPlugin,
+  StoryblokBridgeLoader,
+} from "@storyblok/react/rsc";
 import { env } from "@/env";
 import StoryblokProvider from "./StoryblokProvider";
+import { getResolveRelations } from "@/utils/storyblok/getResolveRelations.utils";
 
 storyblokInit({
   accessToken: env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
@@ -33,15 +38,32 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  if (env.NEXT_PUBLIC_IS_PREVIEW) {
+    return (
+      <StoryblokProvider>
+        <html lang="en">
+          <body
+            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          >
+            {children}
+          </body>
+        </html>
+      </StoryblokProvider>
+    );
+  }
+
   return (
-    <StoryblokProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-          {children}
-        </body>
-      </html>
-    </StoryblokProvider>
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        {children}
+      </body>
+      <StoryblokBridgeLoader
+        options={{
+          resolveRelations: getResolveRelations(),
+        }}
+      />
+    </html>
   );
 }

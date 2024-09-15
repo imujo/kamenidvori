@@ -1,4 +1,4 @@
-import { ISbComponentType } from "@/types/storyblokComponentProps.type";
+import { ISbComponentType } from "@/utils/storyblok/storyblokComponentProps.type";
 import { SbBlokData, storyblokEditable } from "@storyblok/react";
 
 export function typedStoryblokEditable<T extends ISbComponentType>(blok: T) {
