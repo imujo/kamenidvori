@@ -1,3 +1,4 @@
+import Hero from "@/blocks/hero/Hero.block";
 import Page from "@/content/Page.content";
 import {
   BlockConfigStoryblok,
@@ -8,9 +9,7 @@ import {
   FaqStoryblok,
   FeatureBlockStoryblok,
   GalleryBlockStoryblok,
-  HeroBlockStoryblok,
   ImageStoryblok,
-  LandingPageStoryblok,
   ListBlockItemStoryblok,
   ListBlockStoryblok,
   LocationBlockStoryblok,
@@ -31,7 +30,7 @@ interface StoryblokComponentDefinition {
 }
 
 export const storyblokComponents = {
-  page: Page,
+  landing_page: Page,
   block_config: (_: StoryblokComponentProps<BlockConfigStoryblok>) => null,
   button: (_: StoryblokComponentProps<ButtonStoryblok>) => null,
   cta_block: (_: StoryblokComponentProps<CtaBlockStoryblok>) => null,
@@ -40,9 +39,8 @@ export const storyblokComponents = {
   faq_block: (_: StoryblokComponentProps<FaqBlockStoryblok>) => null,
   feature_block: (_: StoryblokComponentProps<FeatureBlockStoryblok>) => null,
   gallery_block: (_: StoryblokComponentProps<GalleryBlockStoryblok>) => null,
-  hero_block: (_: StoryblokComponentProps<HeroBlockStoryblok>) => null,
+  hero_block: Hero,
   image: (_: StoryblokComponentProps<ImageStoryblok>) => null,
-  landing_page: (_: StoryblokComponentProps<LandingPageStoryblok>) => null,
   list_block: (_: StoryblokComponentProps<ListBlockStoryblok>) => null,
   list_block_item: (_: StoryblokComponentProps<ListBlockItemStoryblok>) => null,
   location: (_: StoryblokComponentProps<LocationStoryblok>) => null,

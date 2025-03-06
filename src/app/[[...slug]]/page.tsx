@@ -32,5 +32,7 @@ export default async function RootPage({ params }: RootPageProps) {
 
   if (!response) throw notFound();
 
+  console.log(response.data.story);
+
   return <main>{<StoryblokStory story={response.data.story} />}</main>;
 }

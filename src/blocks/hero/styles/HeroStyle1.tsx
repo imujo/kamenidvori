@@ -1,0 +1,56 @@
+import { Button } from "@/components/Button.component";
+import Container from "@/components/Container.component";
+import { Typography } from "@/components/Typography/Typography.component";
+import { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import Image from "next/image";
+import Link from "next/link";
+export default function HeroStyle1({
+  blok,
+}: StoryblokComponentProps<HeroBlockStoryblok>) {
+  const formattedTitle = blok.title?.split("\n").map((line, i) => (
+    <span key={i}>
+      {line}
+      {i < blok.title.split("\n").length - 1 && <br />}
+    </span>
+  ));
+
+  return (
+    <div className="relative h-[90vh]">
+      {blok.image.filename && (
+        <>
+          <Image
+            src={blok.image.filename}
+            alt={blok.image.alt || blok.image.name}
+            fill
+            className="object-cover brightness-[0.85]"
+          />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,black_100%)] opacity-50 z-10" />
+        </>
+      )}
+      <Container className="relative z-10 text-white w-full h-full text-center flex flex-col justify-between items-center">
+        <div className="flex-1" />
+        <div className="flex flex-col gap-4 flex-1">
+          {blok.eyebrow_title && (
+            <Typography.Body1 className="text-primary backdrop-blur-sm bg-white/30 px-4 py-2 rounded-full w-fit mx-auto">
+              {blok.eyebrow_title}
+            </Typography.Body1>
+          )}
+          <Typography.Heading1 className="max-w-3xl">
+            {formattedTitle}
+          </Typography.Heading1>
+        </div>
+        <div className="w-full text-center mb-12 flex-1 flex flex-col md:flex-row justify-end items-center gap-8 md:justify-between md:items-end md:text-start">
+          <Typography.Body1 className="md:max-w-1/3">
+            {blok.description}
+          </Typography.Body1>
+          {blok.button_label && blok.button_link && (
+            <Link href={blok.button_link.url} target={blok.button_link.target}>
+              <Button variant="outline">{blok.button_label}</Button>
+            </Link>
+          )}
+        </div>
+      </Container>
+    </div>
+  );
+}

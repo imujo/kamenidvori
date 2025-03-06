@@ -7,7 +7,7 @@ export default function Page({
   blok,
 }: StoryblokComponentProps<LandingPageStoryblok>) {
   return (
-    <div {...typedStoryblokEditable(blok)} className="container mx-auto">
+    <div {...typedStoryblokEditable(blok)}>
       {blok?.blocks?.map((bodyBlok) => (
         <StoryblokServerComponent key={bodyBlok._uid} blok={bodyBlok} />
       ))}
