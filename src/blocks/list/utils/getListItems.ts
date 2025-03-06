@@ -1,6 +1,6 @@
-import { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import { storyblok } from "@/storyblok/storyblok";
-import { ListItemProps } from "../components/ListItem.component";
+import type { ListItemProps } from "../components/ListItem.component";
 
 export async function getListItems(
   blok: ListBlockStoryblok

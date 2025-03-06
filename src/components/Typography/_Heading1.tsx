@@ -1,5 +1,5 @@
 import { cn } from "@/utils/cn";
-import { GenericTypographyProps } from "./Typography.component";
+import { type GenericTypographyProps } from "./Typography.component";
 
 export default function INTERNAL__Heading1<TTag extends React.ElementType>({
   as,

@@ -1,5 +1,5 @@
-import { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
-import { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import type { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import HeroStyle1 from "./styles/HeroStyle1";
 
 export default function HeroBlock({

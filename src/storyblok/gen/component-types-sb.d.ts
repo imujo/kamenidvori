@@ -225,6 +225,7 @@ export interface LandingPageStoryblok {
     | LocationBlockStoryblok
     | PageConfigStoryblok
     | TestimonialsBlockStoryblok
+    | TextBlockStoryblok
   )[];
   component: "landing_page";
   _uid: string;
@@ -325,5 +326,11 @@ export interface TestimonialsBlockStoryblok {
   testimonial_tags?: (ISbStoryData<TagStoryblok> | string)[];
   type?: "" | "static" | "dynamic";
   component: "testimonials_block";
+  _uid: string;
+}
+
+export interface TextBlockStoryblok {
+  text: string;
+  component: "text_block";
   _uid: string;
 }

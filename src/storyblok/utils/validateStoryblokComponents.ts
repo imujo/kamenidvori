@@ -1,5 +1,5 @@
 import componentsJson from "@/storyblok/gen/components.storyblok.json";
-import { SbReactComponentsMap } from "@storyblok/react";
+import type { SbReactComponentsMap } from "@storyblok/react";
 import { difference } from "remeda";
 import { storyblokComponents } from "../config/storyblokComponents";
 

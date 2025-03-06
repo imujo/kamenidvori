@@ -1,7 +1,7 @@
 import Block from "@/components/Block.component";
-import { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
-import { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import ListItem, { ListItemProps } from "../components/ListItem.component";
+import type { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import ListItem, { type ListItemProps } from "../components/ListItem.component";
 import ListSectionInfo from "../components/ListSectionInfo.component";
 
 export default async function List3Items({

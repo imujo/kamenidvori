@@ -1,13 +1,13 @@
 import { env } from "@/config/env";
 import {
   apiPlugin,
-  ISbStories,
-  ISbStoriesParams,
+  type ISbStories,
+  type ISbStoriesParams,
   storyblokInit,
 } from "@storyblok/react/rsc";
 import { storyblokComponents } from "./config/storyblokComponents";
 import {
-  AllStoryblokBlocks,
+  type AllStoryblokBlocks,
   validateStoryblokComponents,
 } from "./utils/validateStoryblokComponents";
 

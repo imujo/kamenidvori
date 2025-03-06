@@ -1,5 +1,5 @@
-import { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
-import { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import { type ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import { type StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import List3Items from "./styles/List3Items";
 import { getListItems } from "./utils/getListItems";
 

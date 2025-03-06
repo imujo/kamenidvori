@@ -1,11 +1,11 @@
-import { RichtextStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { RichtextStoryblok } from "@/storyblok/gen/component-types-sb";
 import {
   MarkTypes,
   StoryblokRichText,
-  StoryblokRichTextNode,
+  type StoryblokRichTextNode,
 } from "@storyblok/react/rsc";
 import Link from "next/link";
-import { ReactElement } from "react";
+import type { ReactElement } from "react";
 
 type RichtextProps = {
   field?: RichtextStoryblok;

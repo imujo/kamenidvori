@@ -1,8 +1,8 @@
 import { Button } from "@/components/Button.component";
 import Container from "@/components/Container.component";
 import { Typography } from "@/components/Typography/Typography.component";
-import { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
-import { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import type { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import Image from "next/image";
 import Link from "next/link";
 export default function HeroStyle1({

@@ -1,6 +1,7 @@
 import HeroBlock from "@/blocks/hero/Hero.block";
+import ListBlock from "@/blocks/list/List.block";
 import Page from "@/content/Page.content";
-import {
+import type {
   BlockConfigStoryblok,
   ButtonStoryblok,
   CtaBlockStoryblok,
@@ -11,7 +12,6 @@ import {
   GalleryBlockStoryblok,
   ImageStoryblok,
   ListBlockItemStoryblok,
-  ListBlockStoryblok,
   LocationBlockStoryblok,
   LocationStoryblok,
   MealStoryblok,
@@ -21,9 +21,9 @@ import {
   TagStoryblok,
   TestimonialsBlockStoryblok,
   TestimonialStoryblok,
+  TextBlockStoryblok,
 } from "../gen/component-types-sb";
-import { StoryblokComponentProps } from "../utils/storyblokComponentProps.type";
-import ListBlock from "@/blocks/list/List.block";
+import type { StoryblokComponentProps } from "../utils/storyblokComponentProps.type";
 
 interface StoryblokComponentDefinition {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -56,4 +56,7 @@ export const storyblokComponents = {
   testimonials_block: (
     _: StoryblokComponentProps<TestimonialsBlockStoryblok>
   ) => null,
+  text_block: ({ blok }: StoryblokComponentProps<TextBlockStoryblok>) => (
+    <div>{blok.text}</div>
+  ),
 } as const satisfies StoryblokComponentDefinition;
