@@ -19,7 +19,10 @@ export const getConfiguredStoryblokApi = storyblokInit({
 
 type ISbCustomFetch = Omit<RequestInit, "method">;
 
-function getStories(params: ISbStoriesParams, fetchOptions?: ISbCustomFetch) {
+async function getStories(
+  params: ISbStoriesParams,
+  fetchOptions?: ISbCustomFetch
+) {
   const client = getConfiguredStoryblokApi();
   const version = env.NEXT_PUBLIC_IS_PREVIEW ? "draft" : "published";
 

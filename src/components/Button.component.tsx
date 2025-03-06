@@ -22,6 +22,13 @@ const buttonVariants = tv({
       icon: "h-10 w-10",
     },
   },
+  compoundVariants: [
+    {
+      variant: "ghost",
+      size: ["default", "sm", "lg", "icon"],
+      className: "h-auto p-0",
+    },
+  ],
   defaultVariants: {
     variant: "default",
     size: "default",

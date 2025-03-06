@@ -32,18 +32,16 @@ export default function HeroStyle1({
         <div className="flex-1" />
         <div className="flex flex-col gap-4 flex-1">
           {blok.eyebrow_title && (
-            <Typography.Body1 className="text-primary backdrop-blur-sm bg-white/30 px-4 py-2 rounded-full w-fit mx-auto">
+            <Typography.Heading5 className="text-primary backdrop-blur-sm bg-white/30 px-4 py-2 rounded-full w-fit mx-auto">
               {blok.eyebrow_title}
-            </Typography.Body1>
+            </Typography.Heading5>
           )}
-          <Typography.Heading1 className="max-w-3xl">
-            {formattedTitle}
-          </Typography.Heading1>
+          <Typography.Heading1>{formattedTitle}</Typography.Heading1>
         </div>
         <div className="w-full text-center mb-12 flex-1 flex flex-col md:flex-row justify-end items-center gap-8 md:justify-between md:items-end md:text-start">
-          <Typography.Body1 className="md:max-w-1/3">
+          <Typography.Body2 className="md:max-w-1/3">
             {blok.description}
-          </Typography.Body1>
+          </Typography.Body2>
           {blok.button_label && blok.button_link && (
             <Link href={blok.button_link.url} target={blok.button_link.target}>
               <Button variant="outline">{blok.button_label}</Button>
