@@ -1,22 +1,6 @@
 "use client";
-import Page from "@/components/storyblok/Page.component";
-import { env } from "@/env";
-import { sbComponents } from "@/utils/storyblok/sbComponents.utils";
-import {
-  storyblokInit,
-  apiPlugin,
-  SbReactComponentsMap,
-} from "@storyblok/react/rsc";
 
-const components: SbReactComponentsMap = {
-  page: Page,
-};
-
-storyblokInit({
-  accessToken: env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
-  use: [apiPlugin],
-  components: sbComponents(components, { noThrow: true }),
-});
+import { getStoryblokApi } from "@/storyblok/storyblok";
 
 type StoryblokProviderProps = {
   children: React.ReactNode;
@@ -25,5 +9,6 @@ type StoryblokProviderProps = {
 export default function StoryblokProvider({
   children,
 }: StoryblokProviderProps) {
+  getStoryblokApi();
   return children;
 }

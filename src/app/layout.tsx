@@ -1,19 +1,8 @@
-import type { Metadata } from "next";
+import { env } from "@/env";
+import { Metadata } from "next/dist/types";
 import localFont from "next/font/local";
 import "./globals.css";
-import {
-  storyblokInit,
-  apiPlugin,
-  StoryblokBridgeLoader,
-} from "@storyblok/react/rsc";
-import { env } from "@/env";
 import StoryblokProvider from "./StoryblokProvider";
-import { getResolveRelations } from "@/utils/storyblok/getResolveRelations.utils";
-
-storyblokInit({
-  accessToken: env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
-  use: [apiPlugin],
-});
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -54,16 +43,13 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-      <StoryblokBridgeLoader
-        options={{
-          resolveRelations: getResolveRelations(),
-        }}
-      />
+      <StoryblokProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </StoryblokProvider>
     </html>
   );
 }
