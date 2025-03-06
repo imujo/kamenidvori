@@ -1,0 +1,28 @@
+changed_files=$(git diff --name-only HEAD)
+
+# Run Prettier to format changed files
+if [ -n "$changed_files" ]; then
+  echo "\n\n\n📏 Formatting files with Prettier...\n"
+  echo "$changed_files" | grep '\.js\|\.jsx\|\.ts\|\.tsx\|\.css\|\.scss' | xargs pnpm prettier --write
+  if ! git diff --quiet; then
+    echo "Files formatted!"
+  fi
+fi
+
+echo "\n\n\n🔍 Testing typescript...\n"
+if ! pnpm tsc --noEmit; then
+  echo "🚨 TypeScript found type errors! Please address the issues before pushing."
+  exit 1
+else
+  echo "✅ TypeScript tests passed."
+fi
+
+echo "\n\n\n🔍 Testing ESLint..."
+if ! pnpm run lint; then
+  echo "🚨 ESLint tests failed! Please fix the issues before pushing."
+  exit 1
+else
+  echo "✅ ESLint tests passed."
+fi
+
+echo "✅ All checks passed. Ready to push!"
