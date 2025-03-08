@@ -1215,61 +1215,96 @@
       "component_group_name": "Content"
     },
     {
-      "name": "testimonial",
+      "name": "testimonial_item",
       "display_name": null,
-      "description": null,
-      "created_at": "2025-02-15T08:44:18.079Z",
-      "updated_at": "2025-02-15T08:49:14.797Z",
-      "id": 6960549,
+      "description": "",
+      "created_at": "2025-03-08T09:17:31.490Z",
+      "updated_at": "2025-03-08T09:20:17.458Z",
+      "id": 7059440,
       "schema": {
-        "rating": {
-          "type": "number",
-          "pos": 0,
-          "id": "w6pz6jNlR5CXZpjy9vR4lw"
-        },
         "text": {
           "type": "textarea",
-          "pos": 1,
-          "id": "YChIkz_1S1Wk48bqJEeNPQ"
+          "pos": 0,
+          "id": "ac6qm_PORYquCkB_LLhTqQ"
         },
         "author_name": {
           "type": "text",
-          "pos": 2,
-          "id": "IIAd5JPFRkWs8LQxKh0kZQ"
+          "pos": 1,
+          "id": "iYfX5CTLQHqI_vREYRajbA"
         },
-        "from": {
-          "type": "text",
+        "rating": {
+          "type": "number",
+          "pos": 2,
+          "required": true,
+          "min_value": 1,
+          "max_value": 5,
+          "steps": 1,
+          "decimals": 0,
+          "id": "ndoPC5vxR_6mogXQQyWSzA"
+        },
+        "source": {
+          "type": "option",
           "pos": 3,
-          "id": "1yam31kpRryU_N4_Tr78HQ"
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "d7c2bb61-0bf5-4d0f-a83f-efb046a0cb5a",
+              "name": "google",
+              "value": "google"
+            },
+            {
+              "_uid": "d191442f-3557-410a-bc4a-09e3ce598a0a",
+              "value": "trip_advisor",
+              "name": "trip_advisor"
+            }
+          ],
+          "exclude_empty_option": true,
+          "required": false,
+          "id": "CJCV7HVUQVOPVMhyleemag"
         }
       },
       "image": null,
       "preview_field": null,
-      "is_root": true,
+      "is_root": false,
       "preview_tmpl": null,
-      "is_nestable": false,
+      "is_nestable": true,
       "all_presets": [],
       "preset_id": null,
-      "real_name": "testimonial",
-      "component_group_uuid": "7ba42672-30d1-4712-8d30-0137d6687555",
+      "real_name": "testimonial_item",
+      "component_group_uuid": "3534df38-43e7-42d5-80e3-c941f6c55a27",
       "color": null,
       "icon": null,
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
-      "component_group_name": "Content"
+      "component_group_name": "Blocks"
     },
     {
       "name": "testimonials_block",
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T08:50:45.501Z",
-      "updated_at": "2025-02-15T10:39:48.241Z",
+      "updated_at": "2025-03-08T09:40:20.266Z",
       "id": 6960551,
       "schema": {
-        "config": {
-          "type": "bloks",
+        "title": {
+          "type": "text",
           "pos": 0,
+          "id": "FBRbWXmpRzG3kyDIwpt1YQ"
+        },
+        "items": {
+          "type": "bloks",
+          "pos": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "testimonial_item"
+          ],
+          "id": "yclGl675QZChmjY-w0hzkA"
+        },
+        "block_config": {
+          "type": "bloks",
+          "pos": 2,
           "required": true,
           "minimum": 1,
           "maximum": 1,
@@ -1279,47 +1314,6 @@
             "block_config"
           ],
           "id": "87855201QY2BaalPebx9BA"
-        },
-        "title": {
-          "type": "text",
-          "pos": 1,
-          "id": "FBRbWXmpRzG3kyDIwpt1YQ"
-        },
-        "manual_testimonials": {
-          "type": "options",
-          "pos": 2,
-          "source": "internal_stories",
-          "filter_content_type": [
-            "testimonial"
-          ],
-          "id": "yVt-XSahQIOt9BdtwQ-fQA"
-        },
-        "testimonial_tags": {
-          "type": "options",
-          "pos": 3,
-          "source": "internal_stories",
-          "filter_content_type": [
-            "tag"
-          ],
-          "id": "wEyY8Un8Q4Gd7sgU8uCArA"
-        },
-        "type": {
-          "type": "option",
-          "pos": 4,
-          "use_uuid": true,
-          "options": [
-            {
-              "_uid": "72471d3c-00a7-4308-aa05-15d2de159720",
-              "name": "static",
-              "value": "static"
-            },
-            {
-              "_uid": "eaba6630-4505-4651-850b-54a5f56ad675",
-              "value": "dynamic",
-              "name": "dynamic"
-            }
-          ],
-          "id": "K-jZG80rRvqrMYQBp37g3A"
         }
       },
       "image": null,

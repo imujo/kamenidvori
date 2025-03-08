@@ -6,5 +6,10 @@ export default function INTERNAL__Body3<TTag extends React.ElementType>({
   ...props
 }: GenericTypographyProps<TTag>) {
   const Component = as || "div";
-  return <Component {...props} className={cn("text-base", props.className)} />;
+  return (
+    <Component
+      {...props}
+      className={cn("text-lg opacity-65", props.className)}
+    />
+  );
 }

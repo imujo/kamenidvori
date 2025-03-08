@@ -28,9 +28,7 @@ export default function ListSectionInfo({
       )}
       <div className="md:max-w-1/3">
         {description && (
-          <Typography.Body3 className="mb-4 opacity-75">
-            {description}
-          </Typography.Body3>
+          <Typography.Body3 className="mb-4">{description}</Typography.Body3>
         )}
         {button && (
           <Link href={button.link.url} target={button.link.target}>

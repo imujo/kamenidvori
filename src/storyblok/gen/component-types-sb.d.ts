@@ -227,6 +227,7 @@ export interface LandingPageStoryblok {
     | ListBlockItemStoryblok
     | LocationBlockStoryblok
     | PageConfigStoryblok
+    | TestimonialItemStoryblok
     | TestimonialsBlockStoryblok
     | TextBlockStoryblok
   )[];
@@ -313,21 +314,19 @@ export interface TagStoryblok {
   _uid: string;
 }
 
-export interface TestimonialStoryblok {
-  rating?: string;
+export interface TestimonialItemStoryblok {
   text?: string;
   author_name?: string;
-  from?: string;
-  component: "testimonial";
+  rating: string;
+  source?: "google" | "trip_advisor";
+  component: "testimonial_item";
   _uid: string;
 }
 
 export interface TestimonialsBlockStoryblok {
-  config: BlockConfigStoryblok[];
   title?: string;
-  manual_testimonials?: (ISbStoryData<TestimonialStoryblok> | string)[];
-  testimonial_tags?: (ISbStoryData<TagStoryblok> | string)[];
-  type?: "" | "static" | "dynamic";
+  items?: TestimonialItemStoryblok[];
+  block_config: BlockConfigStoryblok[];
   component: "testimonials_block";
   _uid: string;
 }

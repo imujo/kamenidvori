@@ -1,6 +1,8 @@
 import FeatureBlock from "@/blocks/feature/Feature.block";
+import GalleryBlock from "@/blocks/gallery/Gallery.block";
 import HeroBlock from "@/blocks/hero/Hero.block";
 import ListBlock from "@/blocks/list/List.block";
+import TestimonialsBlock from "@/blocks/testimonials/Testimonials.block";
 import Page from "@/content/Page.content";
 import type {
   BlockConfigStoryblok,
@@ -9,7 +11,6 @@ import type {
   CtaItemStoryblok,
   FaqBlockStoryblok,
   FaqStoryblok,
-  GalleryBlockStoryblok,
   ImageStoryblok,
   ListBlockItemStoryblok,
   LocationBlockStoryblok,
@@ -19,12 +20,10 @@ import type {
   PageConfigStoryblok,
   PlatformRatingStoryblok,
   TagStoryblok,
-  TestimonialsBlockStoryblok,
-  TestimonialStoryblok,
+  TestimonialItemStoryblok,
   TextBlockStoryblok,
 } from "../gen/component-types-sb";
 import type { StoryblokComponentProps } from "../utils/storyblokComponentProps.type";
-import GalleryBlock from "@/blocks/gallery/Gallery.block";
 
 interface StoryblokComponentDefinition {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -53,10 +52,9 @@ export const storyblokComponents = {
   platform_rating: (_: StoryblokComponentProps<PlatformRatingStoryblok>) =>
     null,
   tag: (_: StoryblokComponentProps<TagStoryblok>) => null,
-  testimonial: (_: StoryblokComponentProps<TestimonialStoryblok>) => null,
-  testimonials_block: (
-    _: StoryblokComponentProps<TestimonialsBlockStoryblok>
-  ) => null,
+  testimonials_block: TestimonialsBlock,
+  testimonial_item: (_: StoryblokComponentProps<TestimonialItemStoryblok>) =>
+    null,
   text_block: ({ blok }: StoryblokComponentProps<TextBlockStoryblok>) => (
     <div>{blok.text}</div>
   ),
