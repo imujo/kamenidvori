@@ -47,7 +47,7 @@ export default function ListItem({
   );
 
   return (
-    <li className="relative h-fit w-full rounded-xl overflow-clip">
+    <li className="relative h-fit w-full rounded-xl overflow-clip hover:scale-[102%] transition-all duration-300 hover:shadow-lg">
       {link ? (
         <Link href={link.url} target={link.target}>
           <ItemContent />

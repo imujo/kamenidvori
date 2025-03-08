@@ -24,6 +24,7 @@ import type {
   TextBlockStoryblok,
 } from "../gen/component-types-sb";
 import type { StoryblokComponentProps } from "../utils/storyblokComponentProps.type";
+import GalleryBlock from "@/blocks/gallery/Gallery.block";
 
 interface StoryblokComponentDefinition {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -39,7 +40,7 @@ export const storyblokComponents = {
   faq: (_: StoryblokComponentProps<FaqStoryblok>) => null,
   faq_block: (_: StoryblokComponentProps<FaqBlockStoryblok>) => null,
   feature_block: FeatureBlock,
-  gallery_block: (_: StoryblokComponentProps<GalleryBlockStoryblok>) => null,
+  gallery_block: GalleryBlock,
   hero_block: HeroBlock,
   image: (_: StoryblokComponentProps<ImageStoryblok>) => null,
   list_block: ListBlock,

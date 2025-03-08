@@ -26,7 +26,7 @@ export default async function List3Items({
         description={blok.description}
         button={button || undefined}
       />
-      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {items.slice(0, 3).map((item, index) => {
           return <ListItem key={index} {...item} />;
         })}

@@ -9,7 +9,7 @@ export default function INTERNAL__Body1<TTag extends React.ElementType>({
   return (
     <Component
       {...props}
-      className={cn("text-xl font-bold", props.className)}
+      className={cn("text-xl font-bold tracking-wider", props.className)}
     />
   );
 }

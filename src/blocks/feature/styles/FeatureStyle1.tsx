@@ -37,24 +37,24 @@ export default function FeatureStyle1({
           )}
         </div>
 
-        <div className="w-full md:w-1/2">
-          {blok.eyebrow_title && (
-            <Typography.Body3 className="md:mb-2">
-              {blok.eyebrow_title}
-            </Typography.Body3>
-          )}
+        <div className="w-full md:w-1/2 flex flex-col gap-12">
+          <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
+              {blok.eyebrow_title && (
+                <Typography.Body3>{blok.eyebrow_title}</Typography.Body3>
+              )}
 
-          {blok.title && (
-            <Typography.Heading2 className="md:mb-4 mb-2">
-              {blok.title}
-            </Typography.Heading2>
-          )}
-
-          {blok.body && (
-            <div className="prose mb-4 md:mb-6">
-              <Richtext field={blok.body} />
+              {blok.title && (
+                <Typography.Heading2>{blok.title}</Typography.Heading2>
+              )}
             </div>
-          )}
+
+            {blok.body && (
+              <div className="prose text-gray-600 text-lg">
+                <Richtext field={blok.body} />
+              </div>
+            )}
+          </div>
 
           {blok.button_label && blok.button_link && (
             <Link href={blok.button_link.url} target={blok.button_link.target}>

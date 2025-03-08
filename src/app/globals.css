@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+@theme {
+  --scale-102: 1.02;
+}
+
 @font-face {
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Regular.ttf") format("truetype");
@@ -20,7 +24,7 @@
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Light.ttf") format("truetype");
   font-weight: 300;
-  font-style: normal;
+  font-style: light;
   font-display: swap;
 }
 
@@ -28,7 +32,7 @@
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
+  font-style: medium;
   font-display: swap;
 }
 
@@ -36,7 +40,7 @@
   font-family: "DM Sans";
   src: url("/fonts/DMSans-Bold.ttf") format("truetype");
   font-weight: 700;
-  font-style: normal;
+  font-style: bold;
   font-display: swap;
 }
 
@@ -46,4 +50,39 @@
 
 body {
   font-family: "DM Sans", sans-serif;
+}
+
+.grid-item {
+  /* display: block; */
+  grid-column-start: var(--col-start, 1);
+  grid-column-end: var(--col-end, 2);
+  grid-row-start: var(--row-start, 1);
+  grid-row-end: var(--row-end, 2);
+}
+
+@media (min-width: 640px) {
+  .grid-item {
+    --col-start: var(--col-start-sm, 1);
+    --col-end: var(--col-end-sm, 2);
+    --row-start: var(--row-start-sm, 1);
+    --row-end: var(--row-end-sm, 2);
+  }
+}
+
+@media (min-width: 768px) {
+  .grid-item {
+    --col-start: var(--col-start-md, 1);
+    --col-end: var(--col-end-md, 3);
+    --row-start: var(--row-start-md, 1);
+    --row-end: var(--row-end-md, 2);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-item {
+    --col-start: var(--col-start-lg, 2);
+    --col-end: var(--col-end-lg, 4);
+    --row-start: var(--row-start-lg, 1);
+    --row-end: var(--row-end-lg, 3);
+  }
 }

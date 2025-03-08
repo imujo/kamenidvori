@@ -5,6 +5,7 @@ export interface BlockConfigStoryblok {
   vertical_whitespace_top: "large" | "medium" | "small" | "none";
   vertical_whitespace_bottom: "large" | "medium" | "small" | "none";
   disable_container?: boolean;
+  background_color?: "" | "gray";
   component: "block_config";
   _uid: string;
 }
@@ -184,12 +185,12 @@ export interface FeatureBlockStoryblok {
 }
 
 export interface GalleryBlockStoryblok {
-  block_config: BlockConfigStoryblok[];
   title?: string;
-  image_tags?: (ISbStoryData<ImageTagStoryblok> | string)[];
-  buttons?: ButtonStoryblok[];
-  manual_images?: MultiassetStoryblok;
-  type?: "" | "static" | "dynamic";
+  images?: MultiassetStoryblok;
+  style: "grid" | "list";
+  block_config: BlockConfigStoryblok[];
+  button_label?: string;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   component: "gallery_block";
   _uid: string;
 }
