@@ -7,6 +7,7 @@ import type {
   TestimonialsBlockStoryblok,
 } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import { cn } from "@/utils/cn";
 import useEmblaCarousel from "embla-carousel-react";
 
 const testimonialLabels: Record<
@@ -29,7 +30,7 @@ export default function TestimonialsBlock({
 
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
-            {blok.items?.map((testimonial: TestimonialItemStoryblok) => {
+            {blok.items?.map((testimonial, index) => {
               const initials = testimonial.author_name
                 ?.split(" ")
                 .map((name) => name[0])
@@ -39,7 +40,9 @@ export default function TestimonialsBlock({
               return (
                 <div
                   key={testimonial._uid}
-                  className="flex-[0_0_auto] min-w-0 pl-4 md:pl-8"
+                  className={cn("flex-[0_0_auto] min-w-0", {
+                    "pl-4 md:pl-8": index !== 0,
+                  })}
                 >
                   <div className="bg-white p-6 rounded-3xl border border-gray-600 max-w-[340px]">
                     <Typography.Body3 className="mb-4">

@@ -54,7 +54,7 @@ export default function CtaBlock({
           <Button className="rounded-lg">Submit</Button>
         </form>
       </div>
-      <div className="relative w-full h-[130vw] sm:h-[100vw] lg:h-[75vw] ">
+      <div className="relative w-full h-[130vw] sm:h-[100vw] lg:h-[75vw] 2xl:h-[70vw] ">
         {blok.image?.filename && (
           <Image
             src={blok.image.filename}
