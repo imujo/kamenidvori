@@ -1,7 +1,10 @@
 import Block from "@/components/Block.component";
 import { Button } from "@/components/Button.component";
 import Container from "@/components/Container.component";
-import { Typography } from "@/components/Typography/Typography.component";
+import {
+  formatText,
+  Typography,
+} from "@/components/Typography/Typography.component";
 import type { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import Image from "next/image";
@@ -9,12 +12,7 @@ import Link from "next/link";
 export default function HeroStyle1({
   blok,
 }: StoryblokComponentProps<HeroBlockStoryblok>) {
-  const formattedTitle = blok.title?.split("\n").map((line, i) => (
-    <span key={i}>
-      {line}
-      {i < blok.title.split("\n").length - 1 && <br />}
-    </span>
-  ));
+  const formattedTitle = formatText(blok.title);
 
   return (
     <Block blok={blok} className="relative h-[80vh] md:h-[90vh]">

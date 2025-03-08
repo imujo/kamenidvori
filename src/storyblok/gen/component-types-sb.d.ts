@@ -42,9 +42,9 @@ export interface AssetStoryblok {
 export interface CtaBlockStoryblok {
   title?: string;
   subtitle?: string;
-  ctas?: ButtonStoryblok[];
   items?: CtaItemStoryblok[];
   image?: AssetStoryblok;
+  block_config: BlockConfigStoryblok[];
   component: "cta_block";
   _uid: string;
 }

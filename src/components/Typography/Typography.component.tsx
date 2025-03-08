@@ -21,3 +21,16 @@ export const Typography = {
   Body2: INTERNAL__Body2,
   Body3: INTERNAL__Body3,
 };
+
+export function formatText(text: string) {
+  const splitText = text.split("\n");
+
+  if (splitText.length === 1) return text;
+
+  return splitText.map((line, i) => (
+    <span key={i}>
+      {line}
+      {i < splitText.length - 1 && <br />}
+    </span>
+  ));
+}

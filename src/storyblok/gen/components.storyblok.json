@@ -159,7 +159,7 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T09:04:52.689Z",
-      "updated_at": "2025-03-06T10:25:08.063Z",
+      "updated_at": "2025-03-08T10:05:07.272Z",
       "id": 6960586,
       "schema": {
         "title": {
@@ -171,16 +171,6 @@
           "type": "text",
           "pos": 1,
           "id": "3iLWyOiXTB--OE1EctLK2Q"
-        },
-        "ctas": {
-          "type": "bloks",
-          "pos": 2,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "button"
-          ],
-          "id": "pYJV5dTQSUeGZVGfxmIATA"
         },
         "items": {
           "type": "bloks",
@@ -196,6 +186,19 @@
           "type": "asset",
           "pos": 4,
           "id": "Ep159jnURhKe77oCHprDTg"
+        },
+        "block_config": {
+          "type": "bloks",
+          "pos": 4,
+          "maximum": 1,
+          "minimum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "block_config"
+          ],
+          "id": "Qu2YAoOhQQecCroYS-BLMg",
+          "required": true
         }
       },
       "image": null,

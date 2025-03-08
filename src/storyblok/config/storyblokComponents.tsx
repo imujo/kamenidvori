@@ -1,3 +1,4 @@
+import CtaBlock from "@/blocks/cta/Cta.block";
 import FeatureBlock from "@/blocks/feature/Feature.block";
 import GalleryBlock from "@/blocks/gallery/Gallery.block";
 import HeroBlock from "@/blocks/hero/Hero.block";
@@ -7,7 +8,6 @@ import Page from "@/content/Page.content";
 import type {
   BlockConfigStoryblok,
   ButtonStoryblok,
-  CtaBlockStoryblok,
   CtaItemStoryblok,
   FaqBlockStoryblok,
   FaqStoryblok,
@@ -34,7 +34,7 @@ export const storyblokComponents = {
   landing_page: Page,
   block_config: (_: StoryblokComponentProps<BlockConfigStoryblok>) => null,
   button: (_: StoryblokComponentProps<ButtonStoryblok>) => null,
-  cta_block: (_: StoryblokComponentProps<CtaBlockStoryblok>) => null,
+  cta_block: CtaBlock,
   cta_item: (_: StoryblokComponentProps<CtaItemStoryblok>) => null,
   faq: (_: StoryblokComponentProps<FaqStoryblok>) => null,
   faq_block: (_: StoryblokComponentProps<FaqBlockStoryblok>) => null,
