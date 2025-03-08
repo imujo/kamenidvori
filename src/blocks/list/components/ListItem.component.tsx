@@ -26,7 +26,13 @@ export default function ListItem({
   const ItemContent = () => (
     <>
       {image && (
-        <Image src={image.src} alt={image.alt} fill className="object-cover" />
+        <Image
+          src={image.src}
+          alt={image.alt}
+          className="object-cover"
+          width={1920}
+          height={1080}
+        />
       )}
       {isInfoVisible && (
         <>
@@ -41,7 +47,7 @@ export default function ListItem({
   );
 
   return (
-    <li className="relative h-[450px] w-full rounded-xl overflow-clip">
+    <li className="relative h-fit w-full rounded-xl overflow-clip">
       {link ? (
         <Link href={link.url} target={link.target}>
           <ItemContent />

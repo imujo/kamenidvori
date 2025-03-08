@@ -1,3 +1,4 @@
+import FeatureBlock from "@/blocks/feature/Feature.block";
 import HeroBlock from "@/blocks/hero/Hero.block";
 import ListBlock from "@/blocks/list/List.block";
 import Page from "@/content/Page.content";
@@ -8,7 +9,6 @@ import type {
   CtaItemStoryblok,
   FaqBlockStoryblok,
   FaqStoryblok,
-  FeatureBlockStoryblok,
   GalleryBlockStoryblok,
   ImageStoryblok,
   ListBlockItemStoryblok,
@@ -38,7 +38,7 @@ export const storyblokComponents = {
   cta_item: (_: StoryblokComponentProps<CtaItemStoryblok>) => null,
   faq: (_: StoryblokComponentProps<FaqStoryblok>) => null,
   faq_block: (_: StoryblokComponentProps<FaqBlockStoryblok>) => null,
-  feature_block: (_: StoryblokComponentProps<FeatureBlockStoryblok>) => null,
+  feature_block: FeatureBlock,
   gallery_block: (_: StoryblokComponentProps<GalleryBlockStoryblok>) => null,
   hero_block: HeroBlock,
   image: (_: StoryblokComponentProps<ImageStoryblok>) => null,

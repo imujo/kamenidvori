@@ -1,0 +1,68 @@
+import Block from "@/components/Block.component";
+import { Button } from "@/components/Button.component";
+import Richtext from "@/components/RichText.component";
+import { Typography } from "@/components/Typography/Typography.component";
+import type { FeatureBlockStoryblok } from "@/storyblok/gen/component-types-sb";
+import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
+import { cn } from "@/utils/cn";
+import Image from "next/image";
+import Link from "next/link";
+
+type FeatureStyle1Props = StoryblokComponentProps<FeatureBlockStoryblok> & {
+  reverse?: boolean;
+};
+
+export default function FeatureStyle1({
+  blok,
+  reverse = false,
+}: FeatureStyle1Props) {
+  return (
+    <Block blok={blok}>
+      <div
+        className={cn(
+          "flex flex-col items-center gap-4 md:gap-12 ",
+          reverse ? "md:flex-row" : "md:flex-row-reverse"
+        )}
+      >
+        <div className="w-full md:w-1/2 flex flex-col gap-4">
+          {blok.images?.[0] && (
+            <div className="relative rounded-lg overflow-hidden aspect-video">
+              <Image
+                src={blok.images[0]?.filename || ""}
+                alt={blok.images[0]?.alt || blok.title || "Feature image"}
+                fill
+                className="object-cover"
+              />
+            </div>
+          )}
+        </div>
+
+        <div className="w-full md:w-1/2">
+          {blok.eyebrow_title && (
+            <Typography.Body3 className="md:mb-2">
+              {blok.eyebrow_title}
+            </Typography.Body3>
+          )}
+
+          {blok.title && (
+            <Typography.Heading2 className="md:mb-4 mb-2">
+              {blok.title}
+            </Typography.Heading2>
+          )}
+
+          {blok.body && (
+            <div className="prose mb-4 md:mb-6">
+              <Richtext field={blok.body} />
+            </div>
+          )}
+
+          {blok.button_label && blok.button_link && (
+            <Link href={blok.button_link.url} target={blok.button_link.target}>
+              <Button>{blok.button_label}</Button>
+            </Link>
+          )}
+        </div>
+      </div>
+    </Block>
+  );
+}

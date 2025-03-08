@@ -5,7 +5,7 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T10:19:06.018Z",
-      "updated_at": "2025-02-15T10:31:22.767Z",
+      "updated_at": "2025-03-08T07:05:53.958Z",
       "id": 6960761,
       "schema": {
         "vertical_whitespace_top": {
@@ -69,6 +69,11 @@
           ],
           "exclude_empty_option": true,
           "default_value": "medium"
+        },
+        "disable_container": {
+          "type": "boolean",
+          "pos": 2,
+          "id": "otCqObb9TkmabfpTEGL0lw"
         }
       },
       "image": null,
@@ -364,51 +369,41 @@
       "display_name": null,
       "description": "Feature",
       "created_at": "2025-02-15T08:22:43.179Z",
-      "updated_at": "2025-02-15T10:32:19.324Z",
+      "updated_at": "2025-03-08T06:59:57.791Z",
       "id": 6960509,
       "schema": {
-        "config": {
-          "type": "bloks",
-          "pos": 0,
-          "required": true,
-          "minimum": 1,
-          "maximum": 1,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "block_config"
-          ],
-          "id": "W2Z-Cno2RbaOSCjqG6ONMA"
-        },
         "eyebrow_title": {
           "type": "text",
-          "pos": 1,
+          "pos": 0,
           "id": "u3Ck7K8hTj6dN8Wc_-i2qg"
         },
         "title": {
           "type": "text",
-          "pos": 2,
+          "pos": 1,
           "id": "JsMT6vMvSSWwgC0U2D6Nyw"
         },
         "body": {
           "type": "richtext",
-          "pos": 3,
+          "pos": 2,
           "id": "kE6Jz-9PQx6-JDFmypEQvw"
-        },
-        "ctas": {
-          "type": "bloks",
-          "pos": 4,
-          "restrict_type": "",
-          "restrict_components": true,
-          "component_whitelist": [
-            "button"
-          ],
-          "id": "1Peen_ECSeqluzGrVNuK4A"
         },
         "images": {
           "type": "multiasset",
+          "pos": 3,
+          "id": "BMO50MMuR96_s3Tu725yEg",
+          "filetypes": [
+            "images"
+          ]
+        },
+        "button_label": {
+          "type": "text",
+          "pos": 4,
+          "id": "PA3F9uBaRHmp2molzv6k_w"
+        },
+        "button_link": {
+          "type": "multilink",
           "pos": 5,
-          "id": "BMO50MMuR96_s3Tu725yEg"
+          "id": "ZlNwS3KeT62aXgljBijQgA"
         },
         "theme": {
           "type": "option",
@@ -419,7 +414,7 @@
           "exclude_empty_option": true,
           "id": "5_XMqBCeRIeeXjJIzIupTw"
         },
-        "view_type": {
+        "style": {
           "type": "option",
           "pos": 7,
           "use_uuid": true,
@@ -430,18 +425,27 @@
               "value": "feature_style_1"
             },
             {
-              "_uid": "e63c4d9c-bb47-4019-ba6c-323bf37f9a84",
+              "_uid": "c794667d-2c03-4fe8-99ec-e13a015ab1c3",
               "value": "feature_style_2",
               "name": "feature_style_2"
-            },
-            {
-              "_uid": "756dc83b-dedf-4c8f-b026-f60580c562c0",
-              "value": "feature_style_3",
-              "name": "feature_style_3"
             }
           ],
           "exclude_empty_option": true,
-          "id": "RfTU-M3IRD2rWeBhx6cRxA"
+          "id": "RfTU-M3IRD2rWeBhx6cRxA",
+          "required": true
+        },
+        "block_config": {
+          "type": "bloks",
+          "pos": 8,
+          "required": true,
+          "minimum": 1,
+          "maximum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "block_config"
+          ],
+          "id": "W2Z-Cno2RbaOSCjqG6ONMA"
         }
       },
       "image": null,
@@ -465,10 +469,10 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T08:34:54.986Z",
-      "updated_at": "2025-02-15T10:38:18.880Z",
+      "updated_at": "2025-03-08T07:00:19.363Z",
       "id": 6960547,
       "schema": {
-        "config": {
+        "block_config": {
           "type": "bloks",
           "pos": 0,
           "restrict_type": "",
@@ -550,7 +554,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-06T10:02:31.165Z",
-      "updated_at": "2025-03-06T12:22:59.922Z",
+      "updated_at": "2025-03-08T07:00:37.974Z",
       "id": 7050870,
       "schema": {
         "eyebrow_title": {
@@ -611,7 +615,7 @@
           "default_value": "hero_style_1",
           "id": "JM6m0JWjRUexrXOsH7uYdw"
         },
-        "config": {
+        "block_config": {
           "type": "bloks",
           "pos": 7,
           "restrict_type": "",
@@ -732,7 +736,7 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T09:22:33.013Z",
-      "updated_at": "2025-03-06T10:22:11.585Z",
+      "updated_at": "2025-03-08T07:01:10.574Z",
       "id": 6960619,
       "schema": {
         "title": {
@@ -809,7 +813,7 @@
           "exclude_empty_option": true,
           "id": "HhilBeAqRWS3_P_4DYAC_w"
         },
-        "config": {
+        "block_config": {
           "type": "bloks",
           "pos": 7,
           "minimum": 1,

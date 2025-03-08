@@ -4,6 +4,7 @@ import type { ISbStoryData } from "storyblok";
 export interface BlockConfigStoryblok {
   vertical_whitespace_top: "large" | "medium" | "small" | "none";
   vertical_whitespace_bottom: "large" | "medium" | "small" | "none";
+  disable_container?: boolean;
   component: "block_config";
   _uid: string;
 }
@@ -169,20 +170,21 @@ export type MultiassetStoryblok = {
 }[];
 
 export interface FeatureBlockStoryblok {
-  config: BlockConfigStoryblok[];
   eyebrow_title?: string;
   title?: string;
   body?: RichtextStoryblok;
-  ctas?: ButtonStoryblok[];
   images?: MultiassetStoryblok;
+  button_label?: string;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   theme?: number | string;
-  view_type?: "feature_style_1" | "feature_style_2" | "feature_style_3";
+  style: "feature_style_1" | "feature_style_2";
+  block_config: BlockConfigStoryblok[];
   component: "feature_block";
   _uid: string;
 }
 
 export interface GalleryBlockStoryblok {
-  config: BlockConfigStoryblok[];
+  block_config: BlockConfigStoryblok[];
   title?: string;
   image_tags?: (ISbStoryData<ImageTagStoryblok> | string)[];
   buttons?: ButtonStoryblok[];
@@ -200,7 +202,7 @@ export interface HeroBlockStoryblok {
   button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   image: AssetStoryblok;
   style: "hero_style_1" | "hero_style_2";
-  config?: BlockConfigStoryblok[];
+  block_config?: BlockConfigStoryblok[];
   component: "hero_block";
   _uid: string;
 }
@@ -239,7 +241,7 @@ export interface ListBlockStoryblok {
   source?: "meal";
   manual_items?: ListBlockItemStoryblok[];
   style: "scrolling" | "grid" | "4_items" | "3_items";
-  config: BlockConfigStoryblok[];
+  block_config: BlockConfigStoryblok[];
   component: "list_block";
   _uid: string;
 }

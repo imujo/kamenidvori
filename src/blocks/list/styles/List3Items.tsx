@@ -20,7 +20,7 @@ export default async function List3Items({
     };
 
   return (
-    <Block config={blok.config[0]}>
+    <Block blok={blok}>
       <ListSectionInfo
         title={blok.title}
         description={blok.description}

@@ -1,3 +1,4 @@
+import Block from "@/components/Block.component";
 import { Button } from "@/components/Button.component";
 import Container from "@/components/Container.component";
 import { Typography } from "@/components/Typography/Typography.component";
@@ -16,7 +17,7 @@ export default function HeroStyle1({
   ));
 
   return (
-    <div className="relative h-[90vh]">
+    <Block blok={blok} className="relative h-[80vh] md:h-[90vh]">
       {blok.image.filename && (
         <>
           <Image
@@ -49,6 +50,6 @@ export default function HeroStyle1({
           )}
         </div>
       </Container>
-    </div>
+    </Block>
   );
 }
