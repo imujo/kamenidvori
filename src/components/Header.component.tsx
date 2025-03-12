@@ -3,20 +3,20 @@ import Link from "next/link";
 export default function Header() {
   const navigationTabs = [
     {
-      label: "House villa",
-      href: "/house-villa",
+      label: "Accommodation",
+      href: "/accommodation",
     },
     {
-      label: "Vineyard cottage",
-      href: "/vineyard-cottage",
+      label: "Activities",
+      href: "/activities",
     },
     {
       label: "Restaurant",
       href: "/restaurant",
     },
     {
-      label: "Activities",
-      href: "/activities",
+      label: "Products",
+      href: "/products",
     },
     {
       label: "Gallery",
