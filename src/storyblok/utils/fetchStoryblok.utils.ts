@@ -11,6 +11,7 @@ export async function getPage({ slug }: FetchStoryblokProps) {
   try {
     return await storyblokApi.get(`cdn/stories/${slug?.join("/") || "home"}`, {
       version: env.NEXT_PUBLIC_IS_PREVIEW ? "draft" : "published",
+      resolve_relations: ["accommodation.amenities"],
     });
   } catch (error) {
     console.error(error);

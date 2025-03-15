@@ -4,8 +4,10 @@ import GalleryBlock from "@/blocks/gallery/Gallery.block";
 import HeroBlock from "@/blocks/hero/Hero.block";
 import ListBlock from "@/blocks/list/List.block";
 import TestimonialsBlock from "@/blocks/testimonials/Testimonials.block";
+import Accommodation from "@/content/accommodation/Accommodation";
 import Page from "@/content/Page.content";
 import type {
+  AmenityStoryblok,
   BlockConfigStoryblok,
   ButtonStoryblok,
   CtaItemStoryblok,
@@ -58,4 +60,6 @@ export const storyblokComponents = {
   text_block: ({ blok }: StoryblokComponentProps<TextBlockStoryblok>) => (
     <div>{blok.text}</div>
   ),
+  accommodation: Accommodation,
+  amenity: (_: StoryblokComponentProps<AmenityStoryblok>) => null,
 } as const satisfies StoryblokComponentDefinition;

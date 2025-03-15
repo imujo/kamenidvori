@@ -29,9 +29,11 @@ export default function Richtext({ field }: RichtextProps) {
   };
 
   return (
-    <StoryblokRichText
-      doc={field as StoryblokRichTextNode<React.ReactElement>}
-      resolvers={resolvers}
-    />
+    <div className="prose prose-p:text-lg prose-p:text-gray-800">
+      <StoryblokRichText
+        doc={field as StoryblokRichTextNode<React.ReactElement>}
+        resolvers={resolvers}
+      />
+    </div>
   );
 }

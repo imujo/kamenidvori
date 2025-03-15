@@ -1,6 +1,131 @@
 {
   "components": [
     {
+      "name": "accommodation",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-03-08T12:07:57.780Z",
+      "updated_at": "2025-03-15T06:01:47.818Z",
+      "id": 7059841,
+      "schema": {
+        "title": {
+          "type": "text",
+          "pos": 0,
+          "id": "aJ4LnZe6TKGnToSAQXPmHg"
+        },
+        "intro": {
+          "type": "textarea",
+          "pos": 1,
+          "id": "6rweP4N8Tiqr_1BwreZPwQ"
+        },
+        "body": {
+          "type": "richtext",
+          "pos": 2,
+          "id": "G20Q2mc9QdieZ_eChX32rw"
+        },
+        "lead_image": {
+          "type": "asset",
+          "pos": 3,
+          "id": "74eBn2UxTq6rNfFynESsLg"
+        },
+        "number_of_guests": {
+          "type": "number",
+          "pos": 4,
+          "id": "WE5Jx7MwQyiM-FEWeqByYw"
+        },
+        "number_of_beds": {
+          "type": "number",
+          "pos": 5,
+          "id": "3Q-uC5b8Qn2RF-1FHycZ9w"
+        },
+        "number_of_baths": {
+          "type": "number",
+          "pos": 6,
+          "id": "d5ZQ-4SCROy0dQBWpXuYXA"
+        },
+        "amenities": {
+          "type": "options",
+          "pos": 7,
+          "source": "internal_stories",
+          "filter_content_type": [
+            "amenity"
+          ],
+          "id": "4C5FxluOTwqu595J8xmQfg"
+        },
+        "images": {
+          "type": "multiasset",
+          "pos": 8,
+          "id": "7uJuIrNDT_SvXLphUMLseg"
+        },
+        "coordinates_lat": {
+          "type": "number",
+          "pos": 9,
+          "id": "9dC5LATMT3Cfb47rSISoEw"
+        },
+        "coordinates_lng": {
+          "type": "number",
+          "pos": 10,
+          "id": "h80IYeQgSIWPShUOq2Xidw"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "accommodation",
+      "component_group_uuid": "7ba42672-30d1-4712-8d30-0137d6687555",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Content"
+    },
+    {
+      "name": "amenity",
+      "display_name": null,
+      "description": "",
+      "created_at": "2025-03-08T12:13:53.930Z",
+      "updated_at": "2025-03-15T07:41:30.378Z",
+      "id": 7059842,
+      "schema": {
+        "name": {
+          "type": "text",
+          "pos": 0,
+          "required": true,
+          "id": "6JDohZXNQYq0CyKe7Wp_Ag"
+        },
+        "icon": {
+          "type": "text",
+          "pos": 1,
+          "filetypes": [
+            "images"
+          ],
+          "required": false,
+          "id": "LI0T1IKuTkefgVEW1C4eJQ",
+          "description": "Component name from https://lucide.dev/icons/"
+        }
+      },
+      "image": null,
+      "preview_field": null,
+      "is_root": true,
+      "preview_tmpl": null,
+      "is_nestable": false,
+      "all_presets": [],
+      "preset_id": null,
+      "real_name": "amenity",
+      "component_group_uuid": "7ba42672-30d1-4712-8d30-0137d6687555",
+      "color": null,
+      "icon": null,
+      "internal_tags_list": [],
+      "internal_tag_ids": [],
+      "content_type_asset_preview": null,
+      "component_group_name": "Content"
+    },
+    {
       "name": "block_config",
       "display_name": null,
       "description": null,
@@ -159,16 +284,16 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T09:04:52.689Z",
-      "updated_at": "2025-03-08T10:05:07.272Z",
+      "updated_at": "2025-03-08T10:11:11.328Z",
       "id": 6960586,
       "schema": {
         "title": {
-          "type": "text",
+          "type": "textarea",
           "pos": 0,
           "id": "T2uSBtG2TVu-Uobb0rk3LQ"
         },
         "subtitle": {
-          "type": "text",
+          "type": "textarea",
           "pos": 1,
           "id": "3iLWyOiXTB--OE1EctLK2Q"
         },
@@ -563,7 +688,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-06T10:02:31.165Z",
-      "updated_at": "2025-03-08T07:00:37.974Z",
+      "updated_at": "2025-03-08T10:55:47.015Z",
       "id": 7050870,
       "schema": {
         "eyebrow_title": {
@@ -632,7 +757,8 @@
           "component_whitelist": [
             "block_config"
           ],
-          "id": "MXSoXKThR7qTAG8oPKM2TQ"
+          "id": "MXSoXKThR7qTAG8oPKM2TQ",
+          "required": true
         }
       },
       "image": null,

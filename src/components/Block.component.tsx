@@ -9,9 +9,15 @@ type BlockProps = {
   children: React.ReactNode;
   blok: AllStoryblokBlocks;
   className?: string;
+  disableContainer?: boolean;
 };
 
-export default function Block({ children, blok, className }: BlockProps) {
+export default function Block({
+  children,
+  blok,
+  className,
+  disableContainer,
+}: BlockProps) {
   const config = "block_config" in blok ? blok.block_config?.[0] : undefined;
 
   const backgroundColors: Record<
@@ -32,7 +38,10 @@ export default function Block({ children, blok, className }: BlockProps) {
       )}
       {...typedStoryblokEditable(blok)}
     >
-      <Container disabled={config?.disable_container} className={className}>
+      <Container
+        disabled={config?.disable_container || disableContainer}
+        className={className}
+      >
         {children}
       </Container>
     </VerticalWhitespace>

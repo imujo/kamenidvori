@@ -1,5 +1,6 @@
 import Block from "@/components/Block.component";
 import { Button } from "@/components/Button.component";
+import ContactForm from "@/components/ContactForm.component";
 import {
   formatText,
   Typography,
@@ -24,35 +25,7 @@ export default function CtaBlock({
             {formatText(blok.subtitle)}
           </Typography.Body2>
         )}
-        <form className="flex flex-col gap-4 max-w-3xl mx-auto w-full absolute bottom-0 left-0 right-0 z-30 translate-y-full px-4">
-          <div className="flex gap-4">
-            <input
-              type="text"
-              id="name"
-              name="name"
-              placeholder="Name"
-              className="border border-gray-300 rounded-lg px-4 py-2 bg-white/50 flex-1 min-w-0"
-            />
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="Email"
-              className="border border-gray-300 rounded-lg px-4 py-2 bg-white/50 flex-1 min-w-0"
-            />
-          </div>
-
-          <div className="flex flex-col">
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Message"
-              rows={4}
-              className="border border-gray-300 rounded-lg px-4 py-2 bg-white/50 min-w-0"
-            />
-          </div>
-          <Button className="rounded-lg">Submit</Button>
-        </form>
+        <ContactForm className="absolute bottom-0 left-0 right-0 z-30 translate-y-full  px-4" />
       </div>
       <div className="relative w-full h-[130vw] sm:h-[100vw] lg:h-[75vw] 2xl:h-[70vw] ">
         {blok.image?.filename && (

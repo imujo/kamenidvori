@@ -1,13 +1,13 @@
 import type { GalleryBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import GalleryGrid from "./styles/GalleryGrid";
+import GalleryGridBlock from "./styles/GalleryGridBlock";
 
 export default function GalleryBlock({
   blok,
 }: StoryblokComponentProps<GalleryBlockStoryblok>) {
   switch (blok.style) {
     case "grid":
-      return <GalleryGrid blok={blok} />;
+      return <GalleryGridBlock blok={blok} />;
     default:
       return null;
   }
