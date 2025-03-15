@@ -1,4 +1,5 @@
 import type { RichtextStoryblok } from "@/storyblok/gen/component-types-sb";
+import { cn } from "@/utils/cn";
 import {
   MarkTypes,
   StoryblokRichText,
@@ -9,9 +10,10 @@ import type { ReactElement } from "react";
 
 type RichtextProps = {
   field?: RichtextStoryblok;
+  className?: string;
 };
 
-export default function Richtext({ field }: RichtextProps) {
+export default function Richtext({ field, className }: RichtextProps) {
   if (!field) return null;
 
   const resolvers = {
@@ -29,7 +31,12 @@ export default function Richtext({ field }: RichtextProps) {
   };
 
   return (
-    <div className="prose prose-p:text-lg prose-p:text-gray-800">
+    <div
+      className={cn(
+        "prose prose-p:text-lg prose-p:text-gray-800 text-start",
+        className
+      )}
+    >
       <StoryblokRichText
         doc={field as StoryblokRichTextNode<React.ReactElement>}
         resolvers={resolvers}

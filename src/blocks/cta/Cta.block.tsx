@@ -1,5 +1,4 @@
 import Block from "@/components/Block.component";
-import { Button } from "@/components/Button.component";
 import ContactForm from "@/components/ContactForm.component";
 import {
   formatText,

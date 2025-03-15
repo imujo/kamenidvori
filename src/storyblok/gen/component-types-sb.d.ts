@@ -69,6 +69,27 @@ export interface AccommodationStoryblok {
   _uid: string;
 }
 
+export interface ActivityStoryblok {
+  title: string;
+  intro?: string;
+  lead_image: AssetStoryblok;
+  group_size?: string;
+  body?: RichtextStoryblok;
+  images?: MultiassetStoryblok;
+  items?: ActivityItemStoryblok[];
+  component: "activity";
+  _uid: string;
+}
+
+export interface ActivityItemStoryblok {
+  pre_title: string;
+  title: string;
+  body?: RichtextStoryblok;
+  image?: AssetStoryblok;
+  component: "activity_item";
+  _uid: string;
+}
+
 export interface AmenityStoryblok {
   name: string;
   icon?: string;
@@ -170,10 +191,7 @@ export type MultilinkStoryblok =
 export interface CtaItemStoryblok {
   text?: string;
   link_label?: string;
-  link_to?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  link_to?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   component: "cta_item";
   _uid: string;
 }
@@ -202,10 +220,7 @@ export interface FeatureBlockStoryblok {
   body?: RichtextStoryblok;
   images?: MultiassetStoryblok;
   button_label?: string;
-  button_link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   theme?: number | string;
   style: "feature_style_1" | "feature_style_2";
   block_config: BlockConfigStoryblok[];
@@ -219,10 +234,7 @@ export interface GalleryBlockStoryblok {
   style: "grid" | "list";
   block_config: BlockConfigStoryblok[];
   button_label?: string;
-  button_link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   component: "gallery_block";
   _uid: string;
 }
@@ -232,10 +244,7 @@ export interface HeroBlockStoryblok {
   title: string;
   description?: string;
   button_label?: string;
-  button_link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   image: AssetStoryblok;
   style: "hero_style_1" | "hero_style_2";
   block_config: BlockConfigStoryblok[];
@@ -245,11 +254,7 @@ export interface HeroBlockStoryblok {
 
 export interface ImageStoryblok {
   image?: AssetStoryblok;
-  tags?: (
-    | ISbStoryData<ImageTagStoryblok>
-    | ISbStoryData<TagStoryblok>
-    | string
-  )[];
+  tags?: (ISbStoryData<ImageTagStoryblok> | ISbStoryData<TagStoryblok> | string)[];
   component: "image";
   _uid: string;
 }
@@ -278,10 +283,7 @@ export interface ListBlockStoryblok {
   title?: string;
   description?: string;
   button_label?: string;
-  button_link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   source?: "meal";
   manual_items?: ListBlockItemStoryblok[];
   style: "scrolling" | "grid" | "4_items" | "3_items";
@@ -294,10 +296,7 @@ export interface ListBlockItemStoryblok {
   image: AssetStoryblok;
   title?: string;
   subtitle?: string;
-  link?: Exclude<
-    MultilinkStoryblok,
-    { linktype?: "email" } | { linktype?: "asset" }
-  >;
+  link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   component: "list_block_item";
   _uid: string;
 }
@@ -318,26 +317,6 @@ export interface LocationBlockStoryblok {
   _uid: string;
 }
 
-export interface MealStoryblok {
-  title?: string;
-  description?: string;
-  teaser_image?: AssetStoryblok;
-  theme?: number | string;
-  images?: MultiassetStoryblok;
-  body?: RichtextStoryblok;
-  meal_tags?: (ISbStoryData<MealTagStoryblok> | string)[];
-  view_type?: "view_type_1" | "view_type_2" | "view_type_3";
-  component: "meal";
-  _uid: string;
-}
-
-export interface MealTagStoryblok {
-  label?: string;
-  background_color?: string;
-  component: "meal_tag";
-  _uid: string;
-}
-
 export interface PageConfigStoryblok {
   title?: string;
   og_image?: AssetStoryblok;
@@ -350,12 +329,6 @@ export interface PlatformRatingStoryblok {
   rating?: string;
   icon?: AssetStoryblok;
   component: "platform_rating";
-  _uid: string;
-}
-
-export interface TagStoryblok {
-  label?: string;
-  component: "tag";
   _uid: string;
 }
 

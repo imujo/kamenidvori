@@ -5,8 +5,10 @@ import HeroBlock from "@/blocks/hero/Hero.block";
 import ListBlock from "@/blocks/list/List.block";
 import TestimonialsBlock from "@/blocks/testimonials/Testimonials.block";
 import Accommodation from "@/content/accommodation/Accommodation";
+import Activity from "@/content/activity/Activity";
 import Page from "@/content/Page.content";
 import type {
+  ActivityItemStoryblok,
   AmenityStoryblok,
   BlockConfigStoryblok,
   ButtonStoryblok,
@@ -17,11 +19,8 @@ import type {
   ListBlockItemStoryblok,
   LocationBlockStoryblok,
   LocationStoryblok,
-  MealStoryblok,
-  MealTagStoryblok,
   PageConfigStoryblok,
   PlatformRatingStoryblok,
-  TagStoryblok,
   TestimonialItemStoryblok,
   TextBlockStoryblok,
 } from "../gen/component-types-sb";
@@ -48,18 +47,17 @@ export const storyblokComponents = {
   list_block_item: (_: StoryblokComponentProps<ListBlockItemStoryblok>) => null,
   location: (_: StoryblokComponentProps<LocationStoryblok>) => null,
   location_block: (_: StoryblokComponentProps<LocationBlockStoryblok>) => null,
-  meal: (_: StoryblokComponentProps<MealStoryblok>) => null,
-  meal_tag: (_: StoryblokComponentProps<MealTagStoryblok>) => null,
   page_config: (_: StoryblokComponentProps<PageConfigStoryblok>) => null,
   platform_rating: (_: StoryblokComponentProps<PlatformRatingStoryblok>) =>
     null,
-  tag: (_: StoryblokComponentProps<TagStoryblok>) => null,
   testimonials_block: TestimonialsBlock,
   testimonial_item: (_: StoryblokComponentProps<TestimonialItemStoryblok>) =>
     null,
   text_block: ({ blok }: StoryblokComponentProps<TextBlockStoryblok>) => (
     <div>{blok.text}</div>
   ),
+  activity: Activity,
+  activity_item: (_: StoryblokComponentProps<ActivityItemStoryblok>) => null,
   accommodation: Accommodation,
   amenity: (_: StoryblokComponentProps<AmenityStoryblok>) => null,
 } as const satisfies StoryblokComponentDefinition;

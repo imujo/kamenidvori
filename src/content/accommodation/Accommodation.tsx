@@ -24,7 +24,6 @@ function isAmenityStoryData(
 export default function Accommodation({
   blok,
 }: StoryblokComponentProps<AccommodationStoryblok>) {
-  blok.amenities;
   return (
     <Block blok={blok} disableContainer className="flex flex-col gap-12 pb-20">
       <Container className="mt-20">

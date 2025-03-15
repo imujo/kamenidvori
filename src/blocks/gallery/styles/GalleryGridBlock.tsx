@@ -1,9 +1,9 @@
 import Block from "@/components/Block.component";
 import { Button } from "@/components/Button.component";
 import { Typography } from "@/components/Typography/Typography.component";
+import Field from "@/fields/Field";
 import type { GalleryBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import Link from "next/link";
 import GalleryGrid from "./GalleryGrid";
 
 export default function GalleryGridBlock({
@@ -22,9 +22,9 @@ export default function GalleryGridBlock({
       {images && images.length > 0 && <GalleryGrid images={images} />}
       {blok.button_label && blok.button_link && (
         <div className="flex justify-center">
-          <Link href={blok.button_link.url} target={blok.button_link.target}>
+          <Field field={blok.button_link}>
             <Button>{blok.button_label}</Button>
-          </Link>
+          </Field>
         </div>
       )}
     </Block>

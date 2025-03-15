@@ -1,6 +1,7 @@
 import type { ListBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import { storyblok } from "@/storyblok/storyblok";
 import type { ListItemProps } from "../components/ListItem.component";
+import { getLinkHref } from "@/fields/Field";
 
 export async function getListItems(
   blok: ListBlockStoryblok
@@ -10,22 +11,21 @@ export async function getListItems(
       content_type: blok.source,
     });
 
-    return stories.data.stories
+    const data = stories.data.stories
       .map((story) => {
         switch (story.content.component) {
-          case "meal":
-            const image = story.content.teaser_image?.filename
+          case "activity":
+            const image = story.content.lead_image?.filename
               ? {
-                  src: story.content.teaser_image.filename,
+                  src: story.content.lead_image.filename,
                   alt:
-                    story.content.teaser_image.alt ||
-                    story.content.teaser_image.name,
+                    story.content.lead_image.alt ||
+                    story.content.lead_image.name,
                 }
               : undefined;
 
             return {
               title: story.content.title,
-              subtitle: story.content.description,
               image,
               link: {
                 url: story.full_slug,
@@ -34,6 +34,17 @@ export async function getListItems(
         }
       })
       .filter((item) => item !== undefined);
+    return [
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+      ...data,
+    ];
   }
 
   if (blok.manual_items) {
@@ -45,9 +56,11 @@ export async function getListItems(
           }
         : undefined;
 
+      console.log(item);
+
       const link = item.link
         ? {
-            url: item.link.url,
+            url: getLinkHref(item.link),
             target: item.link.target,
           }
         : undefined;

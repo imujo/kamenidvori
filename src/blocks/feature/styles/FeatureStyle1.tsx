@@ -2,11 +2,11 @@ import Block from "@/components/Block.component";
 import { Button } from "@/components/Button.component";
 import Richtext from "@/components/RichText.component";
 import { Typography } from "@/components/Typography/Typography.component";
+import Field from "@/fields/Field";
 import type { FeatureBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import { cn } from "@/utils/cn";
 import Image from "next/image";
-import Link from "next/link";
 
 type FeatureStyle1Props = StoryblokComponentProps<FeatureBlockStoryblok> & {
   reverse?: boolean;
@@ -16,6 +16,7 @@ export default function FeatureStyle1({
   blok,
   reverse = false,
 }: FeatureStyle1Props) {
+  console.log(blok);
   return (
     <Block blok={blok}>
       <div
@@ -57,9 +58,9 @@ export default function FeatureStyle1({
           </div>
 
           {blok.button_label && blok.button_link && (
-            <Link href={blok.button_link.url} target={blok.button_link.target}>
+            <Field field={blok.button_link}>
               <Button>{blok.button_label}</Button>
-            </Link>
+            </Field>
           )}
         </div>
       </div>

@@ -3,6 +3,7 @@ import { type StoryblokComponentProps } from "@/storyblok/utils/storyblokCompone
 import List3Items from "./styles/List3Items";
 import { getListItems } from "./utils/getListItems";
 import List4Items from "./styles/List4Items";
+import ListGridBlock from "./styles/ListGrid";
 
 export default async function ListBlock({
   blok,
@@ -14,5 +15,7 @@ export default async function ListBlock({
       return <List3Items blok={blok} items={items || []} />;
     case "4_items":
       return <List4Items blok={blok} items={items || []} />;
+    case "grid":
+      return <ListGridBlock blok={blok} items={items || []} />;
   }
 }
