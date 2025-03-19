@@ -5,26 +5,15 @@ import { Typography } from "@/components/Typography/Typography.component";
 import Field from "@/fields/Field";
 import type { FeatureBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import { cn } from "@/utils/cn";
 import Image from "next/image";
 
-type FeatureStyle1Props = StoryblokComponentProps<FeatureBlockStoryblok> & {
-  reverse?: boolean;
-};
+type FeatureStyle3Props = StoryblokComponentProps<FeatureBlockStoryblok>;
 
-export default function FeatureStyle1({
-  blok,
-  reverse = false,
-}: FeatureStyle1Props) {
+export default function FeatureStyle3({ blok }: FeatureStyle3Props) {
   return (
     <Block blok={blok}>
-      <div
-        className={cn(
-          "flex flex-col items-center gap-4 md:gap-12 ",
-          reverse ? "md:flex-row" : "md:flex-row-reverse"
-        )}
-      >
-        <div className="w-full md:w-1/2 flex flex-col gap-4">
+      <div className="flex flex-col items-center gap-8">
+        <div className="w-full max-w-3xl mx-auto">
           {blok.images?.[0] && (
             <div className="relative rounded-lg overflow-hidden aspect-video">
               <Image
@@ -37,8 +26,8 @@ export default function FeatureStyle1({
           )}
         </div>
 
-        <div className="w-full md:w-1/2 flex flex-col gap-12">
-          <div className="flex flex-col gap-4">
+        <div className="w-full max-w-3xl mx-auto flex flex-col gap-6 text-center">
+          <div className="flex flex-col gap-2">
             <div className="flex flex-col gap-2">
               {blok.eyebrow_title && (
                 <Typography.Body3>{blok.eyebrow_title}</Typography.Body3>
@@ -50,16 +39,18 @@ export default function FeatureStyle1({
             </div>
 
             {blok.body && (
-              <div className="prose text-gray-600 text-lg">
+              <div className="prose text-gray-600 text-lg mx-auto">
                 <Richtext field={blok.body} />
               </div>
             )}
           </div>
 
           {blok.button_label && blok.button_link && (
-            <Field field={blok.button_link}>
-              <Button>{blok.button_label}</Button>
-            </Field>
+            <div className="flex justify-center">
+              <Field field={blok.button_link}>
+                <Button>{blok.button_label}</Button>
+              </Field>
+            </div>
           )}
         </div>
       </div>

@@ -6,6 +6,7 @@ import ListBlock from "@/blocks/list/List.block";
 import TestimonialsBlock from "@/blocks/testimonials/Testimonials.block";
 import Accommodation from "@/content/accommodation/Accommodation";
 import Activity from "@/content/activity/Activity";
+import Contact from "@/content/contact/Contact";
 import Page from "@/content/Page.content";
 import type {
   ActivityItemStoryblok,
@@ -21,6 +22,9 @@ import type {
   LocationStoryblok,
   PageConfigStoryblok,
   PlatformRatingStoryblok,
+  ProductStoryblok,
+  SiteInfoStoryblok,
+  TagStoryblok,
   TestimonialItemStoryblok,
   TextBlockStoryblok,
 } from "../gen/component-types-sb";
@@ -60,4 +64,8 @@ export const storyblokComponents = {
   activity_item: (_: StoryblokComponentProps<ActivityItemStoryblok>) => null,
   accommodation: Accommodation,
   amenity: (_: StoryblokComponentProps<AmenityStoryblok>) => null,
+  product: (_: StoryblokComponentProps<ProductStoryblok>) => null,
+  contact: Contact,
+  site_info: (_: StoryblokComponentProps<SiteInfoStoryblok>) => null,
+  tag: (_: StoryblokComponentProps<TagStoryblok>) => null,
 } as const satisfies StoryblokComponentDefinition;

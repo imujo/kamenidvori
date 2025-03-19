@@ -15,36 +15,36 @@ export async function getListItems(
       .map((story) => {
         switch (story.content.component) {
           case "activity":
-            const image = story.content.lead_image?.filename
-              ? {
-                  src: story.content.lead_image.filename,
-                  alt:
-                    story.content.lead_image.alt ||
-                    story.content.lead_image.name,
-                }
-              : undefined;
-
             return {
               title: story.content.title,
-              image,
+              image: story.content.lead_image?.filename
+                ? {
+                    src: story.content.lead_image.filename,
+                    alt:
+                      story.content.lead_image.alt ||
+                      story.content.lead_image.name,
+                  }
+                : undefined,
               link: {
                 url: story.full_slug,
               },
             };
+
+          case "product":
+            return {
+              title: story.content.title,
+              subtitle: story.content.subtitle,
+              image: story.content.image?.filename
+                ? {
+                    src: story.content.image.filename,
+                    alt: story.content.image.alt || story.content.image.name,
+                  }
+                : undefined,
+            };
         }
       })
       .filter((item) => item !== undefined);
-    return [
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-      ...data,
-    ];
+    return data;
   }
 
   if (blok.manual_items) {
@@ -55,8 +55,6 @@ export async function getListItems(
             alt: item.image.alt || item.image.name,
           }
         : undefined;
-
-      console.log(item);
 
       const link = item.link
         ? {

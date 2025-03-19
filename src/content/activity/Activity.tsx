@@ -2,11 +2,11 @@ import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
 import Block from "@/components/Block.component";
 import ContactForm from "@/components/ContactForm.component";
 import Container from "@/components/Container.component";
+import DynamicIcon from "@/components/DynamicIcon";
 import Richtext from "@/components/RichText.component";
 import { Typography } from "@/components/Typography/Typography.component";
 import type { ActivityStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import { Users } from "lucide-react";
 import ActivityItem from "./ActivityItem";
 
 export default function Activity({
@@ -34,17 +34,26 @@ export default function Activity({
       )}
       <Container className="grid grid-cols-12 gap-8">
         <div className="col-span-12 md:col-span-7 flex flex-col gap-4">
-          {blok.group_size && (
+          {blok.tags && blok.tags.length > 0 && (
             <>
               <div className="flex gap-4">
                 <div className="flex items-center gap-2">
-                  <Users size={18} />
-                  <Typography.Body2>{blok.group_size}</Typography.Body2>
+                  {blok.tags?.map((tag) => (
+                    <div key={tag._uid} className="flex items-center gap-2">
+                      {tag.icon && (
+                        <DynamicIcon iconName={tag.icon} size={18} />
+                      )}
+                      {tag.title && (
+                        <Typography.Body2>{tag.title}</Typography.Body2>
+                      )}
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="mt-6 mb-6 border-t border-gray-200" />
             </>
           )}
+
           <Richtext field={blok.body} />
           {blok.items && blok.items.length > 0 && (
             <div>

@@ -1,6 +1,7 @@
+import Header from "@/components/header/Header";
 import StoryblokProvider from "@/storyblok/components/StroyblokProvider";
 import "./globals.css";
-import Header from "@/components/Header.component";
+import Footer from "@/components/footer/Footer";
 
 export default function RootLayout({
   children,
@@ -13,6 +14,7 @@ export default function RootLayout({
         <body>
           <Header />
           {children}
+          <Footer />
         </body>
       </StoryblokProvider>
     </html>

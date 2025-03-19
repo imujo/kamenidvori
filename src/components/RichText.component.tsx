@@ -10,10 +10,15 @@ import type { ReactElement } from "react";
 
 type RichtextProps = {
   field?: RichtextStoryblok;
+  removeStyling?: boolean;
   className?: string;
 };
 
-export default function Richtext({ field, className }: RichtextProps) {
+export default function Richtext({
+  field,
+  className,
+  removeStyling,
+}: RichtextProps) {
   if (!field) return null;
 
   const resolvers = {
@@ -33,7 +38,10 @@ export default function Richtext({ field, className }: RichtextProps) {
   return (
     <div
       className={cn(
-        "prose prose-p:text-lg prose-p:text-gray-800 text-start",
+        {
+          "prose prose-p:text-lg prose-p:text-gray-800 text-start":
+            !removeStyling,
+        },
         className
       )}
     >

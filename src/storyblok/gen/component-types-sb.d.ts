@@ -73,7 +73,7 @@ export interface ActivityStoryblok {
   title: string;
   intro?: string;
   lead_image: AssetStoryblok;
-  group_size?: string;
+  tags?: TagStoryblok[];
   body?: RichtextStoryblok;
   images?: MultiassetStoryblok;
   items?: ActivityItemStoryblok[];
@@ -110,6 +110,12 @@ export interface ButtonStoryblok {
   label?: string;
   variant?: "primary" | "outline";
   component: "button";
+  _uid: string;
+}
+
+export interface ContactStoryblok {
+  page_config: PageConfigStoryblok[];
+  component: "contact";
   _uid: string;
 }
 
@@ -222,7 +228,7 @@ export interface FeatureBlockStoryblok {
   button_label?: string;
   button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
   theme?: number | string;
-  style: "feature_style_1" | "feature_style_2";
+  style: "feature_style_1" | "feature_style_2" | "feature_style_3";
   block_config: BlockConfigStoryblok[];
   component: "feature_block";
   _uid: string;
@@ -283,8 +289,8 @@ export interface ListBlockStoryblok {
   title?: string;
   description?: string;
   button_label?: string;
-  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
-  source?: "meal";
+  button_link?: Exclude<MultilinkStoryblok, {linktype?: "email"}>;
+  source?: "activity" | "product";
   manual_items?: ListBlockItemStoryblok[];
   style: "scrolling" | "grid" | "4_items" | "3_items";
   block_config: BlockConfigStoryblok[];
@@ -329,6 +335,30 @@ export interface PlatformRatingStoryblok {
   rating?: string;
   icon?: AssetStoryblok;
   component: "platform_rating";
+  _uid: string;
+}
+
+export interface ProductStoryblok {
+  image?: AssetStoryblok;
+  title: string;
+  subtitle?: string;
+  component: "product";
+  _uid: string;
+}
+
+export interface SiteInfoStoryblok {
+  instagram_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  facebook_link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  footer_text?: RichtextStoryblok;
+  footer_contact_info?: RichtextStoryblok;
+  component: "site_info";
+  _uid: string;
+}
+
+export interface TagStoryblok {
+  title?: string;
+  icon?: string;
+  component: "tag";
   _uid: string;
 }
 
