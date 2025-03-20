@@ -1,5 +1,5 @@
 import Block from "@/components/Block.component";
-import ContactForm from "@/components/ContactForm.component";
+import ContactForm from "@/components/contact/ContactForm.component";
 import type { ContactStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 

@@ -4,6 +4,8 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     BASE_URL: z.string().min(1),
+    SENDGRID_API_KEY: z.string().min(1),
+    SENDGRID_EMAIL: z.string().min(1),
   },
   client: {
     NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN: z.string().min(1),
@@ -18,5 +20,7 @@ export const env = createEnv({
       process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
     NEXT_PUBLIC_IS_PREVIEW: process.env.NEXT_PUBLIC_IS_PREVIEW,
     BASE_URL: process.env.BASE_URL,
+    SENDGRID_API_KEY: process.env.SENDGRID_API_KEY,
+    SENDGRID_EMAIL: process.env.SENDGRID_EMAIL,
   },
 });

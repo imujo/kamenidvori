@@ -29,12 +29,14 @@ export default function HeroStyle1({
       )}
       <Container className="relative z-10 text-white w-full h-full text-center flex flex-col justify-between items-center">
         <div className="flex-1" />
-        <div className="flex flex-col gap-4 flex-1">
-          {blok.eyebrow_title && (
-            <Typography.Heading5 className="text-primary backdrop-blur-sm bg-white/30 px-4 py-2 rounded-full w-fit mx-auto">
-              {blok.eyebrow_title}
-            </Typography.Heading5>
-          )}
+        <div className="flex flex-col gap-8 md:gap-12 flex-1 items-center">
+          <Image
+            src="/logo_vertical.png"
+            alt="Kameni dvori"
+            width={150}
+            height={50}
+            className="w-[150px] md:w-[250px]"
+          />
           <Typography.Heading1>{formattedTitle}</Typography.Heading1>
         </div>
         <div className="w-full text-center mb-12 flex-1 flex flex-col md:flex-row justify-end items-center gap-8 md:justify-between md:items-end md:text-start">

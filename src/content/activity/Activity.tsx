@@ -1,6 +1,6 @@
 import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
 import Block from "@/components/Block.component";
-import ContactForm from "@/components/ContactForm.component";
+import ContactForm from "@/components/contact/ContactForm.component";
 import Container from "@/components/Container.component";
 import DynamicIcon from "@/components/DynamicIcon";
 import Richtext from "@/components/RichText.component";

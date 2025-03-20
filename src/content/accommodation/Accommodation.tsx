@@ -8,7 +8,7 @@ import type {
 } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import Richtext from "@/components/RichText.component";
-import ContactForm from "@/components/ContactForm.component";
+import ContactForm from "@/components/contact/ContactForm.component";
 import type { ISbStoryData } from "@storyblok/react/rsc";
 import DynamicIcon from "@/components/DynamicIcon";
 import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
