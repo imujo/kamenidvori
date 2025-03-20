@@ -2,7 +2,9 @@ import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
 export const env = createEnv({
-  server: {},
+  server: {
+    BASE_URL: z.string().min(1),
+  },
   client: {
     NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN: z.string().min(1),
     NEXT_PUBLIC_IS_PREVIEW: z
@@ -15,5 +17,6 @@ export const env = createEnv({
     NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN:
       process.env.NEXT_PUBLIC_STORYBLOK_ACCESS_TOKEN,
     NEXT_PUBLIC_IS_PREVIEW: process.env.NEXT_PUBLIC_IS_PREVIEW,
+    BASE_URL: process.env.BASE_URL,
   },
 });

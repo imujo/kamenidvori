@@ -1,36 +1,32 @@
+import { env } from "@/config/env";
+import { getConfiguredStoryblokApi } from "@/storyblok/storyblok";
 import type { MetadataRoute } from "next";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
-    {
-      url: "https://acme.com",
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: "https://acme.com/es",
-          de: "https://acme.com/de",
-        },
-      },
-    },
-    {
-      url: "https://acme.com/about",
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: "https://acme.com/es/about",
-          de: "https://acme.com/de/about",
-        },
-      },
-    },
-    {
-      url: "https://acme.com/blog",
-      lastModified: new Date(),
-      alternates: {
-        languages: {
-          es: "https://acme.com/es/blog",
-          de: "https://acme.com/de/blog",
-        },
-      },
-    },
-  ];
+const normalizeUrl = (fullSlug: string) => {
+  if (fullSlug === "home") return env.BASE_URL;
+
+  if (fullSlug.startsWith("content")) return null;
+
+  return `${env.BASE_URL}/${fullSlug}`;
+};
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const storyblokApi = getConfiguredStoryblokApi();
+
+  const stories = await storyblokApi.getStories({});
+
+  const sitemap = stories.data.stories
+    .map((story) => {
+      const url = normalizeUrl(story.full_slug);
+
+      if (!url) return null;
+
+      return {
+        url,
+        lastModified: story.updated_at,
+      };
+    })
+    .filter((url) => url !== null);
+
+  return sitemap;
 }
