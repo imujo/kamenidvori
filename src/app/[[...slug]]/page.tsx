@@ -1,6 +1,8 @@
+import type { PageConfigStoryblok } from "@/storyblok/gen/component-types-sb";
 import { getConfiguredStoryblokApi } from "@/storyblok/storyblok";
 import { getPage } from "@/storyblok/utils/fetchStoryblok.utils";
 import { StoryblokStory } from "@storyblok/react/rsc";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 export type RootPageProps = {
@@ -21,6 +23,37 @@ export async function generateStaticParams() {
   }));
 
   return slugs;
+}
+
+export async function generateMetadata({
+  params,
+}: RootPageProps): Promise<Metadata> {
+  try {
+    const slug = (await params).slug;
+
+    if (slug && slug[0] === "content") throw notFound();
+
+    const response = await getPage({ slug });
+
+    const story = response?.data.story.content;
+
+    if ("page_config" in story === false) return {};
+
+    const pageConfig = story.page_config[0] as PageConfigStoryblok | undefined;
+
+    if (!pageConfig) return {};
+
+    const ogImageUrl = pageConfig.og_image?.filename;
+
+    return {
+      title: pageConfig.title,
+      openGraph: {
+        images: ogImageUrl ? [ogImageUrl] : undefined,
+      },
+    };
+  } catch {
+    return {};
+  }
 }
 
 export default async function RootPage({ params }: RootPageProps) {
