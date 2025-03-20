@@ -25,6 +25,15 @@ export async function generateStaticParams() {
   return slugs;
 }
 
+const defaultMetadata: Metadata = {
+  title: "Kameni dvori",
+  openGraph: {
+    images: [
+      "https://a.storyblok.com/f/304185/1024x683/167f124cf8/image-1024x683.jpg",
+    ],
+  },
+};
+
 export async function generateMetadata({
   params,
 }: RootPageProps): Promise<Metadata> {
@@ -37,22 +46,23 @@ export async function generateMetadata({
 
     const story = response?.data.story.content;
 
-    if ("page_config" in story === false) return {};
+    if ("page_config" in story === false) return defaultMetadata;
 
     const pageConfig = story.page_config[0] as PageConfigStoryblok | undefined;
 
-    if (!pageConfig) return {};
+    if (!pageConfig) return defaultMetadata;
 
     const ogImageUrl = pageConfig.og_image?.filename;
 
     return {
       title: pageConfig.title,
+      description: pageConfig.description,
       openGraph: {
         images: ogImageUrl ? [ogImageUrl] : undefined,
       },
     };
   } catch {
-    return {};
+    return defaultMetadata;
   }
 }
 
@@ -64,8 +74,6 @@ export default async function RootPage({ params }: RootPageProps) {
   const response = await getPage({ slug });
 
   if (!response) throw notFound();
-
-  console.log(response.data.story);
 
   return <main>{<StoryblokStory story={response.data.story} />}</main>;
 }

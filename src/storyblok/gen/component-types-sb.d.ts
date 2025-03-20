@@ -266,7 +266,7 @@ export interface ImageStoryblok {
 }
 
 export interface LandingPageStoryblok {
-  config: PageConfigStoryblok[];
+  page_config: PageConfigStoryblok[];
   blocks?: (
     | BlockConfigStoryblok
     | FaqBlockStoryblok
@@ -325,6 +325,7 @@ export interface LocationBlockStoryblok {
 
 export interface PageConfigStoryblok {
   title?: string;
+  description?: string;
   og_image?: AssetStoryblok;
   component: "page_config";
   _uid: string;
