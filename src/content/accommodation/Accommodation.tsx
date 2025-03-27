@@ -65,7 +65,7 @@ export default function Accommodation({
           <div className="mt-6 mb-6 border-t border-gray-200" />
           <Richtext field={blok.body} />
           {blok.amenities && !!blok.amenities.length && (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 mt-12">
               <Typography.Body1>Amenities</Typography.Body1>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                 {blok.amenities?.map((amenity) => {

@@ -39,7 +39,7 @@ export default function FeatureStyle3({ blok }: FeatureStyle3Props) {
             </div>
 
             {blok.body && (
-              <div className="prose text-gray-600 text-lg mx-auto">
+              <div className="prose text-gray-600 text-lg mx-auto [&_p]:text-center">
                 <Richtext field={blok.body} />
               </div>
             )}
