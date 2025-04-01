@@ -64,7 +64,7 @@ export default function HeaderClient({
   return (
     <header className="h-16 fixed top-0 left-0 right-0 z-50 bg-white w-full box-border flex flex-row items-center justify-between px-4">
       <Link href="/" className="font-medium">
-        <Image src="/logo.png" alt="Kameni dvori" width={100} height={100} />
+        <Image src="/logo.png" alt="Kameni dvori" width={200} height={200} />
       </Link>
       <div className="hidden md:flex gap-4">
         {navigationTabs.map((tab, i) => (

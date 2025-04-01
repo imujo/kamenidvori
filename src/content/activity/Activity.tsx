@@ -8,6 +8,7 @@ import { Typography } from "@/components/Typography/Typography.component";
 import type { ActivityStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import ActivityItem from "./ActivityItem";
+import Testimonials from "@/blocks/testimonials/Testimonials";
 
 export default function Activity({
   blok,
@@ -81,6 +82,15 @@ export default function Activity({
               src: image.filename || "",
               alt: image.alt || image.name,
             }))}
+          />
+        </Container>
+      )}
+
+      {blok.testimonials && blok.testimonials.length > 0 && (
+        <Container className="mt-12">
+          <Testimonials
+            testimonialItems={blok.testimonials}
+            title="What our guests say"
           />
         </Container>
       )}

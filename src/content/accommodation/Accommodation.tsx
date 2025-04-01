@@ -1,17 +1,18 @@
+import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
+import Testimonials from "@/blocks/testimonials/Testimonials";
 import Block from "@/components/Block.component";
 import Container from "@/components/Container.component";
+import DynamicIcon from "@/components/DynamicIcon";
+import Richtext from "@/components/RichText.component";
 import { Typography } from "@/components/Typography/Typography.component";
-import { Users, Bed, Bath } from "lucide-react";
+import ContactForm from "@/components/contact/ContactForm.component";
 import type {
   AccommodationStoryblok,
   AmenityStoryblok,
 } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
-import Richtext from "@/components/RichText.component";
-import ContactForm from "@/components/contact/ContactForm.component";
 import type { ISbStoryData } from "@storyblok/react/rsc";
-import DynamicIcon from "@/components/DynamicIcon";
-import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
+import { Bath, Bed, Users } from "lucide-react";
 
 function isAmenityStoryData(
   amenity: ISbStoryData<AmenityStoryblok> | string
@@ -105,6 +106,15 @@ export default function Accommodation({
               src: image.filename || "",
               alt: image.alt || image.name,
             }))}
+          />
+        </Container>
+      )}
+
+      {blok.testimonials && blok.testimonials.length > 0 && (
+        <Container className="mt-12">
+          <Testimonials
+            testimonialItems={blok.testimonials}
+            title="What our guests say"
           />
         </Container>
       )}

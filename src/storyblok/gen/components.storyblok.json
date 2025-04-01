@@ -5,47 +5,60 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-08T12:07:57.780Z",
-      "updated_at": "2025-03-15T06:01:47.818Z",
+      "updated_at": "2025-04-01T04:58:24.788Z",
       "id": 7059841,
       "schema": {
+        "page_config": {
+          "type": "bloks",
+          "pos": 0,
+          "minimum": 1,
+          "maximum": 1,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "page_config"
+          ],
+          "required": true,
+          "id": "12whiPjTQC6Qp4we-wr_Ww"
+        },
         "title": {
           "type": "text",
-          "pos": 0,
+          "pos": 1,
           "id": "aJ4LnZe6TKGnToSAQXPmHg"
         },
         "intro": {
           "type": "textarea",
-          "pos": 1,
+          "pos": 2,
           "id": "6rweP4N8Tiqr_1BwreZPwQ"
         },
         "body": {
           "type": "richtext",
-          "pos": 2,
+          "pos": 3,
           "id": "G20Q2mc9QdieZ_eChX32rw"
         },
         "lead_image": {
           "type": "asset",
-          "pos": 3,
+          "pos": 4,
           "id": "74eBn2UxTq6rNfFynESsLg"
         },
         "number_of_guests": {
           "type": "number",
-          "pos": 4,
+          "pos": 5,
           "id": "WE5Jx7MwQyiM-FEWeqByYw"
         },
         "number_of_beds": {
           "type": "number",
-          "pos": 5,
+          "pos": 6,
           "id": "3Q-uC5b8Qn2RF-1FHycZ9w"
         },
         "number_of_baths": {
           "type": "number",
-          "pos": 6,
+          "pos": 7,
           "id": "d5ZQ-4SCROy0dQBWpXuYXA"
         },
         "amenities": {
           "type": "options",
-          "pos": 7,
+          "pos": 8,
           "source": "internal_stories",
           "filter_content_type": [
             "amenity"
@@ -54,18 +67,28 @@
         },
         "images": {
           "type": "multiasset",
-          "pos": 8,
+          "pos": 9,
           "id": "7uJuIrNDT_SvXLphUMLseg"
         },
         "coordinates_lat": {
           "type": "number",
-          "pos": 9,
+          "pos": 10,
           "id": "9dC5LATMT3Cfb47rSISoEw"
         },
         "coordinates_lng": {
           "type": "number",
-          "pos": 10,
+          "pos": 11,
           "id": "h80IYeQgSIWPShUOq2Xidw"
+        },
+        "testimonials": {
+          "type": "bloks",
+          "pos": 12,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "testimonial_item"
+          ],
+          "id": "FwrWFrWcTFSY1cCbxGWErQ"
         }
       },
       "image": null,
@@ -89,23 +112,36 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-15T08:40:23.227Z",
-      "updated_at": "2025-03-19T18:32:09.644Z",
+      "updated_at": "2025-04-01T05:16:09.462Z",
       "id": 7089951,
       "schema": {
+        "page_config": {
+          "type": "bloks",
+          "pos": 0,
+          "minimum": 1,
+          "maximum": 1,
+          "required": true,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "page_config"
+          ],
+          "id": "TdQnxF_5R-2a8YSW7rj0Hg"
+        },
         "title": {
           "type": "text",
-          "pos": 0,
+          "pos": 1,
           "required": true,
           "id": "h_mE1sMKQ1K0egnva2iiWQ"
         },
         "intro": {
           "type": "textarea",
-          "pos": 1,
+          "pos": 2,
           "id": "C-sIhRN3R_a10f4DiqC90w"
         },
         "lead_image": {
           "type": "asset",
-          "pos": 2,
+          "pos": 3,
           "filetypes": [
             "images"
           ],
@@ -114,7 +150,7 @@
         },
         "tags": {
           "type": "bloks",
-          "pos": 3,
+          "pos": 4,
           "restrict_type": "",
           "restrict_components": true,
           "component_whitelist": [
@@ -124,12 +160,12 @@
         },
         "body": {
           "type": "richtext",
-          "pos": 4,
+          "pos": 5,
           "id": "U-ZCYipDRsCuReFoXxkykQ"
         },
         "images": {
           "type": "multiasset",
-          "pos": 5,
+          "pos": 6,
           "filetypes": [
             "images"
           ],
@@ -137,13 +173,23 @@
         },
         "items": {
           "type": "bloks",
-          "pos": 6,
+          "pos": 7,
           "restrict_type": "",
           "restrict_components": true,
           "component_whitelist": [
             "activity_item"
           ],
           "id": "RBvTV9kxRTyxzHCk40_oow"
+        },
+        "testimonials": {
+          "type": "bloks",
+          "pos": 8,
+          "restrict_type": "",
+          "restrict_components": true,
+          "component_whitelist": [
+            "testimonial_item"
+          ],
+          "id": "aXCp2Nh3TTW95Suh4OsjEQ"
         }
       },
       "image": null,
@@ -1497,7 +1543,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-08T09:17:31.490Z",
-      "updated_at": "2025-03-08T09:20:17.458Z",
+      "updated_at": "2025-04-01T05:04:44.696Z",
       "id": 7059440,
       "schema": {
         "text": {
@@ -1513,8 +1559,7 @@
         "rating": {
           "type": "number",
           "pos": 2,
-          "required": true,
-          "min_value": 1,
+          "required": false,
           "max_value": 5,
           "steps": 1,
           "decimals": 0,
@@ -1534,6 +1579,16 @@
               "_uid": "d191442f-3557-410a-bc4a-09e3ce598a0a",
               "value": "trip_advisor",
               "name": "trip_advisor"
+            },
+            {
+              "_uid": "faf7db0d-7ea4-4d60-aa5d-22ad3b45c87e",
+              "value": "booking",
+              "name": "booking"
+            },
+            {
+              "_uid": "4d93cd2b-585b-40ac-8658-95a63cf70adc",
+              "value": "airbnb",
+              "name": "airbnb"
             }
           ],
           "exclude_empty_option": true,

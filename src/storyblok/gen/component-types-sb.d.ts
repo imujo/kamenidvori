@@ -54,6 +54,7 @@ export type MultiassetStoryblok = {
 }[];
 
 export interface AccommodationStoryblok {
+  page_config: PageConfigStoryblok[];
   title?: string;
   intro?: string;
   body?: RichtextStoryblok;
@@ -65,11 +66,13 @@ export interface AccommodationStoryblok {
   images?: MultiassetStoryblok;
   coordinates_lat?: string;
   coordinates_lng?: string;
+  testimonials?: TestimonialItemStoryblok[];
   component: "accommodation";
   _uid: string;
 }
 
 export interface ActivityStoryblok {
+  page_config: PageConfigStoryblok[];
   title: string;
   intro?: string;
   lead_image: AssetStoryblok;
@@ -77,6 +80,7 @@ export interface ActivityStoryblok {
   body?: RichtextStoryblok;
   images?: MultiassetStoryblok;
   items?: ActivityItemStoryblok[];
+  testimonials?: TestimonialItemStoryblok[];
   component: "activity";
   _uid: string;
 }
@@ -366,8 +370,8 @@ export interface TagStoryblok {
 export interface TestimonialItemStoryblok {
   text?: string;
   author_name?: string;
-  rating: string;
-  source?: "google" | "trip_advisor";
+  rating?: string;
+  source?: "google" | "trip_advisor" | "booking" | "airbnb";
   component: "testimonial_item";
   _uid: string;
 }
