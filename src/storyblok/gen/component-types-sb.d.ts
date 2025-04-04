@@ -307,6 +307,7 @@ export interface ListBlockItemStoryblok {
   title?: string;
   subtitle?: string;
   link?: Exclude<MultilinkStoryblok, {linktype?: "email"} | {linktype?: "asset"}>;
+  show_view_more?: boolean;
   component: "list_block_item";
   _uid: string;
 }

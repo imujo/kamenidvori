@@ -68,6 +68,7 @@ export async function getListItems(
         subtitle: item.subtitle,
         image: image,
         link,
+        showViewMore: item.show_view_more,
       };
     });
   }

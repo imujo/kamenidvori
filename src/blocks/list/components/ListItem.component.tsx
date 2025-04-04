@@ -13,6 +13,7 @@ export type ListItemProps = {
     url: string;
     target?: "_blank" | "_self";
   };
+  showViewMore?: boolean;
 };
 
 export default function ListItem({
@@ -20,6 +21,7 @@ export default function ListItem({
   subtitle,
   image,
   link,
+  showViewMore,
 }: ListItemProps) {
   const isInfoVisible = title || subtitle;
 
@@ -38,7 +40,12 @@ export default function ListItem({
         <>
           <div className="absolute bottom-0 left-0 right-0 p-4 text-white z-10">
             {title && <Typography.Body1>{title}</Typography.Body1>}
-            {subtitle && <Typography.Body2>{subtitle}</Typography.Body2>}
+            {subtitle && <Typography.Body3>{subtitle}</Typography.Body3>}
+            {showViewMore && (
+              <Typography.Body3 className="mt-2  opacity-100">
+                View More
+              </Typography.Body3>
+            )}
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 from-0% via-black/20 via-40% to-transparent to-60%" />
         </>
