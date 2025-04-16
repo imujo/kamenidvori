@@ -1,4 +1,5 @@
 import GalleryGrid from "@/blocks/gallery/styles/GalleryGrid";
+import LocationBlock from "@/blocks/location/LocationBlock";
 import Testimonials from "@/blocks/testimonials/Testimonials";
 import Block from "@/components/Block.component";
 import Container from "@/components/Container.component";
@@ -118,6 +119,16 @@ export default function Accommodation({
           />
         </Container>
       )}
+
+      <LocationBlock
+        blok={{
+          _uid: "location",
+          component: "location_block",
+          location: blok.location,
+          block_config: [],
+          title: "Where to find us",
+        }}
+      />
     </Block>
   );
 }

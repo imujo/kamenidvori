@@ -67,6 +67,7 @@ export interface AccommodationStoryblok {
   coordinates_lat?: string;
   coordinates_lng?: string;
   testimonials?: TestimonialItemStoryblok[];
+  location: "house_villa" | "vineyard_cottage";
   component: "accommodation";
   _uid: string;
 }
@@ -322,8 +323,9 @@ export interface LocationStoryblok {
 }
 
 export interface LocationBlockStoryblok {
+  block_config: BlockConfigStoryblok[];
   title?: string;
-  config: BlockConfigStoryblok[];
+  location: "house_villa" | "vineyard_cottage";
   component: "location_block";
   _uid: string;
 }

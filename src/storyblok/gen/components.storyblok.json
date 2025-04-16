@@ -5,7 +5,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-08T12:07:57.780Z",
-      "updated_at": "2025-04-01T04:58:24.788Z",
+      "updated_at": "2025-04-16T16:15:00.829Z",
       "id": 7059841,
       "schema": {
         "page_config": {
@@ -89,6 +89,26 @@
             "testimonial_item"
           ],
           "id": "FwrWFrWcTFSY1cCbxGWErQ"
+        },
+        "location": {
+          "type": "option",
+          "pos": 13,
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "b5d0c76f-f525-4cfa-acad-4c3c9e7dc465",
+              "name": "house_villa",
+              "value": "house_villa"
+            },
+            {
+              "_uid": "e22e25a2-c0b6-44f7-9a07-8c7748b00d33",
+              "value": "vineyard_cottage",
+              "name": "vineyard_cottage"
+            }
+          ],
+          "exclude_empty_option": true,
+          "required": true,
+          "id": "ECtrXCYYR-u_NN__4uWMyA"
         }
       },
       "image": null,
@@ -1301,17 +1321,12 @@
       "display_name": null,
       "description": null,
       "created_at": "2025-02-15T09:03:56.442Z",
-      "updated_at": "2025-02-15T10:23:25.081Z",
+      "updated_at": "2025-04-16T16:12:04.377Z",
       "id": 6960585,
       "schema": {
-        "title": {
-          "type": "text",
-          "pos": 0,
-          "id": "FYuq76_JRjCCi4HVsbSI5Q"
-        },
-        "config": {
+        "block_config": {
           "type": "bloks",
-          "pos": 1,
+          "pos": 0,
           "required": true,
           "minimum": 1,
           "maximum": 1,
@@ -1321,6 +1336,31 @@
             "block_config"
           ],
           "id": "-TnlJEfoTRCaIncYd0y0Tw"
+        },
+        "title": {
+          "type": "text",
+          "pos": 1,
+          "id": "FYuq76_JRjCCi4HVsbSI5Q"
+        },
+        "location": {
+          "type": "option",
+          "pos": 2,
+          "use_uuid": true,
+          "options": [
+            {
+              "_uid": "f21a23c9-1793-4da8-aa40-4502c0f862c1",
+              "name": "house_villa",
+              "value": "house_villa"
+            },
+            {
+              "_uid": "51864ba4-c5be-44ab-8fb2-401802860560",
+              "value": "vineyard_cottage",
+              "name": "vineyard_cottage"
+            }
+          ],
+          "exclude_empty_option": true,
+          "required": true,
+          "id": "Ql9s4GiDR9yByGkL_tDPow"
         }
       },
       "image": null,

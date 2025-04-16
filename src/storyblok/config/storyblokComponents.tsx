@@ -3,6 +3,7 @@ import FeatureBlock from "@/blocks/feature/Feature.block";
 import GalleryBlock from "@/blocks/gallery/Gallery.block";
 import HeroBlock from "@/blocks/hero/Hero.block";
 import ListBlock from "@/blocks/list/List.block";
+import LocationBlock from "@/blocks/location/LocationBlock";
 import TestimonialsBlock from "@/blocks/testimonials/Testimonials.block";
 import Accommodation from "@/content/accommodation/Accommodation";
 import Activity from "@/content/activity/Activity";
@@ -18,7 +19,6 @@ import type {
   FaqStoryblok,
   ImageStoryblok,
   ListBlockItemStoryblok,
-  LocationBlockStoryblok,
   LocationStoryblok,
   PageConfigStoryblok,
   PlatformRatingStoryblok,
@@ -50,7 +50,7 @@ export const storyblokComponents = {
   list_block: ListBlock,
   list_block_item: (_: StoryblokComponentProps<ListBlockItemStoryblok>) => null,
   location: (_: StoryblokComponentProps<LocationStoryblok>) => null,
-  location_block: (_: StoryblokComponentProps<LocationBlockStoryblok>) => null,
+  location_block: LocationBlock,
   page_config: (_: StoryblokComponentProps<PageConfigStoryblok>) => null,
   platform_rating: (_: StoryblokComponentProps<PlatformRatingStoryblok>) =>
     null,
