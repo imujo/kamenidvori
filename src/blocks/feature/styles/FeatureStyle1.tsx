@@ -26,7 +26,7 @@ export default function FeatureStyle1({
       >
         <div className="w-full md:w-1/2 flex flex-col gap-4">
           {blok.images?.[0] && (
-            <div className="relative rounded-lg overflow-hidden aspect-video">
+            <div className="relative rounded-lg overflow-hidden w-full h-full min-h-[200px]">
               <Image
                 src={blok.images[0]?.filename || ""}
                 alt={blok.images[0]?.alt || blok.title || "Feature image"}

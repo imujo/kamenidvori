@@ -76,6 +76,7 @@ export interface ActivityStoryblok {
   page_config: PageConfigStoryblok[];
   title: string;
   intro?: string;
+  teaser_image?: AssetStoryblok;
   lead_image: AssetStoryblok;
   tags?: TagStoryblok[];
   body?: RichtextStoryblok;

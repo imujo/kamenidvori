@@ -18,7 +18,14 @@ export async function getListItems(
           case "activity":
             return {
               title: story.content.title,
-              image: story.content.lead_image?.filename
+              image: story.content.teaser_image?.filename
+                ? {
+                    src: story.content.teaser_image.filename,
+                    alt:
+                      story.content.teaser_image.alt ||
+                      story.content.teaser_image.name,
+                  }
+                : story.content.lead_image?.filename
                 ? {
                     src: story.content.lead_image.filename,
                     alt:

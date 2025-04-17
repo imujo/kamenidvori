@@ -125,6 +125,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -132,7 +133,7 @@
       "display_name": null,
       "description": "",
       "created_at": "2025-03-15T08:40:23.227Z",
-      "updated_at": "2025-04-01T05:16:09.462Z",
+      "updated_at": "2025-04-17T18:17:42.249Z",
       "id": 7089951,
       "schema": {
         "page_config": {
@@ -159,9 +160,14 @@
           "pos": 2,
           "id": "C-sIhRN3R_a10f4DiqC90w"
         },
-        "lead_image": {
+        "teaser_image": {
           "type": "asset",
           "pos": 3,
+          "id": "yVX1ty6uSRy4K9m1zYEFYg"
+        },
+        "lead_image": {
+          "type": "asset",
+          "pos": 4,
           "filetypes": [
             "images"
           ],
@@ -170,7 +176,7 @@
         },
         "tags": {
           "type": "bloks",
-          "pos": 4,
+          "pos": 5,
           "restrict_type": "",
           "restrict_components": true,
           "component_whitelist": [
@@ -180,12 +186,12 @@
         },
         "body": {
           "type": "richtext",
-          "pos": 5,
+          "pos": 6,
           "id": "U-ZCYipDRsCuReFoXxkykQ"
         },
         "images": {
           "type": "multiasset",
-          "pos": 6,
+          "pos": 7,
           "filetypes": [
             "images"
           ],
@@ -193,7 +199,7 @@
         },
         "items": {
           "type": "bloks",
-          "pos": 7,
+          "pos": 8,
           "restrict_type": "",
           "restrict_components": true,
           "component_whitelist": [
@@ -203,7 +209,7 @@
         },
         "testimonials": {
           "type": "bloks",
-          "pos": 8,
+          "pos": 9,
           "restrict_type": "",
           "restrict_components": true,
           "component_whitelist": [
@@ -226,6 +232,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -273,6 +280,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -314,6 +322,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -419,6 +428,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -468,6 +478,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Atoms"
     },
     {
@@ -506,6 +517,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -569,6 +581,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "CTA"
     },
     {
@@ -609,6 +622,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "CTA"
     },
     {
@@ -653,6 +667,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -732,6 +747,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -837,6 +853,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -915,6 +932,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1009,6 +1027,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1049,6 +1068,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -1098,6 +1118,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -1217,6 +1238,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1269,6 +1291,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1314,6 +1337,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -1377,6 +1401,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1417,6 +1442,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1457,6 +1483,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Content"
     },
     {
@@ -1498,6 +1525,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -1546,6 +1574,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -1582,6 +1611,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": ""
     },
     {
@@ -1656,6 +1686,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1709,6 +1740,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     },
     {
@@ -1740,6 +1772,7 @@
       "internal_tags_list": [],
       "internal_tag_ids": [],
       "content_type_asset_preview": null,
+      "metadata": {},
       "component_group_name": "Blocks"
     }
   ],
