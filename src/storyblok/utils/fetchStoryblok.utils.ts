@@ -13,6 +13,7 @@ export async function getPage({ slug }: FetchStoryblokProps) {
       version: env.NEXT_PUBLIC_IS_PREVIEW ? "draft" : "published",
       resolve_relations: ["accommodation.amenities"],
       resolve_links: "url",
+      cv: Date.now(),
     });
   } catch (error) {
     console.error(error);

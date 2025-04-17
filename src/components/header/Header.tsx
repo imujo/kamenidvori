@@ -4,6 +4,7 @@ import HeaderClient from "./HeaderClient.component";
 export default async function Header() {
   const stories = await storyblok.getStories({
     content_type: "site_info",
+    cv: Date.now(),
   });
 
   const siteInfoStory = stories.data.stories[0];

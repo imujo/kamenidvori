@@ -9,6 +9,7 @@ export async function getListItems(
   if (blok.source) {
     const stories = await storyblok.getStories({
       content_type: blok.source,
+      cv: Date.now(),
     });
 
     const data = stories.data.stories

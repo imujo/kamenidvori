@@ -13,7 +13,9 @@ const normalizeUrl = (fullSlug: string) => {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const storyblokApi = getConfiguredStoryblokApi();
 
-  const stories = await storyblokApi.getStories({});
+  const stories = await storyblokApi.getStories({
+    cv: Date.now(),
+  });
 
   const sitemap = stories.data.stories
     .map((story) => {

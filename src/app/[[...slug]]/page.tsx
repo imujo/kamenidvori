@@ -16,7 +16,9 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const storyblokApi = getConfiguredStoryblokApi();
-  const stories = await storyblokApi.getStories({});
+  const stories = await storyblokApi.getStories({
+    cv: Date.now(),
+  });
 
   const slugs = stories.data.stories.map((story) => ({
     slug: story.full_slug.split("/"),

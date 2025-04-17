@@ -33,6 +33,7 @@ export default async function Footer() {
 
   const stories = await storyblok.getStories({
     content_type: "site_info",
+    cv: Date.now(),
   });
 
   const siteInfoStory = stories.data.stories[0];

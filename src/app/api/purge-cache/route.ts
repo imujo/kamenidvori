@@ -14,7 +14,9 @@ export async function POST(request: Request) {
     }
 
     const storyblokApi = getConfiguredStoryblokApi();
-    const stories = await storyblokApi.getStories({});
+    const stories = await storyblokApi.getStories({
+      cv: Date.now(),
+    });
 
     const urls = stories.data.stories
       .map((story) => `/${story.full_slug}`)
