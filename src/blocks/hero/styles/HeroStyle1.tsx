@@ -5,6 +5,7 @@ import {
   formatText,
   Typography,
 } from "@/components/Typography/Typography.component";
+import { getLinkHref } from "@/fields/Field";
 import type { HeroBlockStoryblok } from "@/storyblok/gen/component-types-sb";
 import type { StoryblokComponentProps } from "@/storyblok/utils/storyblokComponentProps.type";
 import Image from "next/image";
@@ -59,7 +60,7 @@ export default function HeroStyle1({
           {blok.button_label && blok.button_link && (
             <div className="animate-fade-in-down opacity-0 [animation-delay:1000ms] [animation-fill-mode:forwards]">
               <Link
-                href={blok.button_link.url}
+                href={getLinkHref(blok.button_link)}
                 target={blok.button_link.target}
               >
                 <Button variant="outline">{blok.button_label}</Button>
