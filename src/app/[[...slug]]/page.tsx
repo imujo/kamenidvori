@@ -11,7 +11,8 @@ export type RootPageProps = {
   }>;
 };
 
-export const revalidate = 0;
+const sevenDaysInSeconds = 60 * 60 * 24 * 7;
+export const revalidate = sevenDaysInSeconds;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
