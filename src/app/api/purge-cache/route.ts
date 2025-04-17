@@ -16,11 +16,18 @@ export async function POST(request: Request) {
     const storyblokApi = getConfiguredStoryblokApi();
     const stories = await storyblokApi.getStories({});
 
-    stories.data.stories.forEach((story) => {
-      revalidatePath(story.full_slug);
+    const urls = stories.data.stories
+      .map((story) => `/${story.full_slug}`)
+      .filter((url) => !url.includes("content"));
+    urls.push("/");
+
+    urls.forEach((url) => {
+      revalidatePath(url);
     });
 
-    return new Response(JSON.stringify({ message: "Cache purged" }), {
+    await storyblokApi.flushCache();
+
+    return new Response(JSON.stringify({ message: "Cache purged", urls }), {
       status: 200,
     });
   } catch (error: unknown) {

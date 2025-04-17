@@ -22,6 +22,7 @@ export async function generateStaticParams() {
     slug: story.full_slug.split("/"),
   }));
 
+  console.log(slugs.filter((slugs) => !slugs.slug.includes("content")));
   return slugs.filter((slugs) => !slugs.slug.includes("content"));
 }
 
