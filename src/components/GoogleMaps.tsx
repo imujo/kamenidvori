@@ -16,7 +16,6 @@ const locationCoordinates: Record<
 };
 
 export default function GoogleMaps({ location }: GoogleMapsProps) {
-  console.log(location);
   const position = locationCoordinates[location];
 
   return (
