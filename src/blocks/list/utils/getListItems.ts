@@ -13,6 +13,7 @@ export async function getListItems(
     });
 
     const data = stories.data.stories
+      .sort((a, b) => a.position - b.position)
       .map((story) => {
         switch (story.content.component) {
           case "activity":
