@@ -7,7 +7,7 @@ import {
 } from "@storyblok/react/rsc";
 import { storyblokComponents } from "./config/storyblokComponents";
 import {
-  type AllStoryblokBlocks,
+  type AnyStoryblokBlock,
   validateStoryblokComponents,
 } from "./utils/validateStoryblokComponents";
 
@@ -29,7 +29,7 @@ async function getStories(
   return client.getStories(
     { ...params, version },
     fetchOptions
-  ) as unknown as ISbStories<AllStoryblokBlocks>;
+  ) as unknown as ISbStories<AnyStoryblokBlock>;
 }
 
 export const storyblok = {

@@ -49,4 +49,4 @@ export function validateStoryblokComponents(
 type AllStoryblokComponents =
   (typeof storyblokComponents)[keyof typeof storyblokComponents];
 
-export type AllStoryblokBlocks = Parameters<AllStoryblokComponents>[0]["blok"];
+export type AnyStoryblokBlock = Parameters<AllStoryblokComponents>[0]["blok"];

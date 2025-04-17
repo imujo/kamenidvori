@@ -1,5 +1,5 @@
 import { typedStoryblokEditable } from "@/storyblok/utils/typedStoryblokEditable";
-import type { AllStoryblokBlocks } from "@/storyblok/utils/validateStoryblokComponents";
+import type { AnyStoryblokBlock } from "@/storyblok/utils/validateStoryblokComponents";
 import Container from "./Container.component";
 import VerticalWhitespace from "./VerticalWhitespace.component";
 import { cn } from "@/utils/cn";
@@ -7,7 +7,7 @@ import type { BlockConfigStoryblok } from "@/storyblok/gen/component-types-sb";
 
 type BlockProps = {
   children: React.ReactNode;
-  blok: AllStoryblokBlocks;
+  blok: AnyStoryblokBlock;
   className?: string;
   disableContainer?: boolean;
 };
