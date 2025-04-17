@@ -5,14 +5,13 @@ import { StoryblokStory } from "@storyblok/react/rsc";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-export type RootPageProps = {
+type RootPageProps = {
   params: Promise<{
     slug?: string[];
   }>;
 };
 
-const sevenDaysInSeconds = 60 * 60 * 24 * 7;
-export const revalidate = sevenDaysInSeconds;
+export const revalidate = 604800;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
@@ -23,7 +22,7 @@ export async function generateStaticParams() {
     slug: story.full_slug.split("/"),
   }));
 
-  return slugs;
+  return slugs.filter((slugs) => !slugs.slug.includes("content"));
 }
 
 const defaultMetadata: Metadata = {
