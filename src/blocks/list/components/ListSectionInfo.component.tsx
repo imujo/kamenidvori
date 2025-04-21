@@ -32,7 +32,7 @@ export default function ListSectionInfo({
         )}
         {button && (
           <Link href={button.link.url} target={button.link.target}>
-            <Button variant="ghost">{button.label}</Button>
+            <Button variant="default">{button.label}</Button>
           </Link>
         )}
       </div>
